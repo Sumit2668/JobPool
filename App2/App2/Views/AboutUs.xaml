@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin.Abstractions"
+             x:Class="App2.Views.AboutUs"
+             BackgroundColor="#EFEEEE">
+    <StackLayout  BackgroundColor="#EFEEEE">
+        <Grid x:Name="MainGrid">
+            <Image Source="bg" Aspect="AspectFill" />
+            <StackLayout >
+                <StackLayout Padding="20,10" Spacing="10" >
+                    <StackLayout VerticalOptions="Start" HorizontalOptions="FillAndExpand" Spacing="0" Padding="13,0">
+                        <controls:CircleImage x:Name="CircleImg"
+                                            Source="filter" 
+											Aspect="AspectFill"
+                                            HorizontalOptions="CenterAndExpand"
+                                            VerticalOptions="CenterAndExpand"
+                                            BorderColor="#DFC91D" 
+                                            BorderThickness="4">
+                            <controls:CircleImage.WidthRequest>
+                                <OnPlatform x:TypeArguments="x:Double" iOS="120" Android="120" />
+                            </controls:CircleImage.WidthRequest>
+                            <controls:CircleImage.HeightRequest>
+                                <OnPlatform x:TypeArguments="x:Double" iOS="120" Android="120" />
+                            </controls:CircleImage.HeightRequest>
+                        </controls:CircleImage>
+                    </StackLayout>
+                    <StackLayout>
+                        <Label Text="CANDIDATE NAME" TextColor="White" HorizontalOptions="CenterAndExpand" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" FontSize="22" />
+                    </StackLayout>
+                </StackLayout>
+                <Image Source="curve" Aspect="AspectFill" Margin="0" VerticalOptions="EndAndExpand"/>
+            </StackLayout>
+        </Grid>
+        <StackLayout BackgroundColor="#EFEEEE" Margin="0" Padding="20,0">
+            <ScrollView BackgroundColor="#EFEEEE">
+                <StackLayout BackgroundColor="#EFEEEE">
+                    <StackLayout Orientation="Horizontal" Margin="0" Padding="0" HorizontalOptions="StartAndExpand">
+                        <Label Text="City:" TextColor="Black" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" FontSize="14" HorizontalOptions="StartAndExpand"  />
+                        <Label Text="Indore" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" FontSize="14" HorizontalOptions="StartAndExpand"  />
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal" Margin="0" Padding="0" HorizontalOptions="StartAndExpand">
+                        <Label Text="Skill:" TextColor="Black" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" FontSize="14" HorizontalOptions="StartAndExpand"  />
+                        <Label Text="C#, Xamarin, Html, Html5, CSS3, Java" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" FontSize="14" HorizontalOptions="StartAndExpand"  />
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal" Margin="0" Padding="0" HorizontalOptions="StartAndExpand">
+                        <Label Text="Experieance:" TextColor="Black" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" FontSize="14" HorizontalOptions="StartAndExpand"  />
+                        <Label Text="2 Year 6 Months" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" FontSize="14" HorizontalOptions="StartAndExpand"  />
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal" Margin="0" Padding="0" HorizontalOptions="StartAndExpand">
+                        <Label Text="Address:" TextColor="Black" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" FontSize="14" HorizontalOptions="StartAndExpand"  />
+                        <Label Text="55/1 Sudama Nagar, Indore" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" FontSize="14" HorizontalOptions="StartAndExpand"  />
+                    </StackLayout>
+                    <BoxView  HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" HeightRequest="1"/>
+                    <StackLayout Orientation="Vertical" Margin="0" Padding="0" VerticalOptions="Start" HorizontalOptions="FillAndExpand"  BackgroundColor="##EFEEEE" >
+                        <Label Text="About Us:" TextColor="Black" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" FontSize="16" HorizontalOptions="StartAndExpand"  />
+                        <Label Text="Lorem Ipsum is Simply dummy text of the printing and type setting industry , Lorem Ipsum is Standered dummy text of the printing and type setting industry " VerticalTextAlignment="Start" HorizontalTextAlignment="Start" FontSize="14" HorizontalOptions="StartAndExpand"  />
+                    </StackLayout>
+                </StackLayout>
+                
+            </ScrollView>
+        </StackLayout>
+
+        <StackLayout Orientation="Horizontal"
+                     HorizontalOptions="StartAndExpand"
+                     VerticalOptions="EndAndExpand"
+                     Spacing="0" 
+                     Margin="0" 
+                     Padding="0" 
+                     HeightRequest="30"
+                     BackgroundColor="White">
+
+            <Label x:Name="lblDownload"  HorizontalOptions="StartAndExpand" Margin="0,0,1,0" TextColor="Black" FontSize="20" BackgroundColor="#DFC91D" Text="DOWNLOAD" HorizontalTextAlignment="Center"  VerticalTextAlignment="Center"  >
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer  />
+                </Label.GestureRecognizers>
+            </Label>
+
+            <Label x:Name="lblCandidate" HorizontalOptions="EndAndExpand" Margin="1,0,0,0" FontSize="20" BackgroundColor="#DFC91D" TextColor="Black" Text="CANDIDATE" HorizontalTextAlignment="Center"  VerticalTextAlignment="Center"  >
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer />
+                </Label.GestureRecognizers>
+            </Label>
+        </StackLayout>
+    </StackLayout>
+    
+</ContentPage>

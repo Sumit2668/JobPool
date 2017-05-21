@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:App2.CustomRenderer"
+             x:Class="App2.Views.CandidateReg"
+             Title="CANDIDATE REGISTERATION"
+             BackgroundImage="bg">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout  Orientation="Vertical" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"  >
+                <StackLayout Padding="20,20" Spacing="20">
+                    <StackLayout VerticalOptions="Start" HorizontalOptions="Center"  Spacing="0" Orientation="Horizontal" Padding="0">
+                        <Label x:Name ="lblMessage" Text ="" IsVisible ="false" TextColor="Red" FontSize="13" HorizontalOptions="Center" FontAttributes="Bold" />
+                    </StackLayout>
+                    <!--Name-->
+                    <StackLayout VerticalOptions="Start" HorizontalOptions="FillAndExpand" Spacing="0" Padding="13,0,13,0">
+                        <Label x:Name ="lblname"
+                           Text ="NAME:"
+                           IsVisible ="false"
+                           TextColor="#E8E8E8" 
+                           FontSize="12" />
+                        <StackLayout VerticalOptions="Start" 
+                                 HorizontalOptions="FillAndExpand" 
+                                 Orientation="Horizontal">
+                            <local:MyEntry x:Name="txtname"
+                                       FontSize="15" 
+                                           Keyboard="Default"
+                                       Focused="txtname_Focused" 
+                                       Unfocused="txtname_Unfocused"
+                                       FontFamily="SF UI Display" 
+                                       PlaceholderColor="#E8E8E8"
+							           Placeholder="NAME" 
+                                       HorizontalOptions="FillAndExpand" 
+                                       TextColor="#E8E8E8"
+							           HeightRequest="40">
+                            </local:MyEntry>
+                        </StackLayout>
+                        <BoxView BackgroundColor="#E8E8E8" HeightRequest="1"/>
+                    </StackLayout>
+                    <!--userid-->
+                    <StackLayout VerticalOptions="Start" HorizontalOptions="FillAndExpand" Spacing="0" Padding="13,0,13,0">
+                        <Label x:Name ="lbluserid" Text ="USER NAME:" IsVisible ="false" TextColor="#E8E8E8" FontSize="12" />
+                        <StackLayout VerticalOptions="Start" HorizontalOptions="FillAndExpand" Spacing="0" Orientation="Horizontal" Padding="0">
+                            <local:MyEntry x:Name="txtuserid" 
+                                       FontSize="15" 
+                                           Keyboard="Default"
+                                       Focused="txtuserid_Focused"
+                                       Unfocused="txtuserid_Unfocused"
+                                       FontFamily="SF UI Display"  
+                                       PlaceholderColor="#E8E8E8"
+							           Placeholder="USER ID" 
+                                       HorizontalOptions="FillAndExpand"
+                                       TextColor="#E8E8E8"
+							           HeightRequest="40">
+                            </local:MyEntry>
+                        </StackLayout>
+                        <BoxView BackgroundColor="#E8E8E8" HeightRequest="1"/>
+                    </StackLayout>
+                    <!--email-->
+                    <StackLayout VerticalOptions="Start" HorizontalOptions="FillAndExpand" Spacing="0" Padding="13,0,13,0">
+                        <Label x:Name ="lblemail" Text ="EMAIL:" IsVisible ="false" TextColor="#E8E8E8" FontSize="12" />
+                        <StackLayout VerticalOptions="Start" HorizontalOptions="FillAndExpand" Spacing="0" Orientation="Horizontal" Padding="0">
+                            <local:MyEntry x:Name="txtemail" 
+                                       FontSize="15" 
+                                           Keyboard="Email"
+                                       Focused="txtemail_Focused"
+                                       Unfocused="txtemail_Unfocused"
+                                       FontFamily="SF UI Display" 
+                                       PlaceholderColor="#E8E8E8"
+							           Placeholder="EMAIL"
+                                       HorizontalOptions="FillAndExpand"
+                                       TextColor="#E8E8E8"
+							           HeightRequest="40">
+                            </local:MyEntry>
+                        </StackLayout>
+                        <BoxView BackgroundColor="#E8E8E8" HeightRequest="1"/>
+                    </StackLayout>
+                    <!--password-->
+                    <StackLayout VerticalOptions="Start" HorizontalOptions="FillAndExpand" Spacing="0" Padding="13,0,13,0">
+                        <Label x:Name ="lblPass" Text ="PASSWORD:" IsVisible ="false" TextColor="#E8E8E8" FontSize="12" />
+                        <StackLayout VerticalOptions="Start" HorizontalOptions="FillAndExpand" Spacing="0" Orientation="Horizontal" Padding="0">
+                            <local:MyEntry HeightRequest="40" 
+                                       FontFamily="SF UI Display" 
+                                       PlaceholderColor="#E8E8E8"
+                                       x:Name="txtPass"
+                                           Keyboard="Default"
+                                       Focused="txtPass_Focused" 
+						               Unfocused="txtPass_Unfocused"
+                                       FontSize="15" 
+                                       IsPassword="true" 
+                                       Placeholder="Password"
+                                       TextColor="#E8E8E8"
+                                       HorizontalOptions="FillAndExpand">
+                            </local:MyEntry>
+                            <Image Source="icon_eye_off" Aspect="AspectFit" x:Name="signupPassshow">
+                                <Image.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="OnPassShowTepped" />
+                                </Image.GestureRecognizers>
+                            </Image>
+                        </StackLayout>
+                        <BoxView BackgroundColor="#E8E8E8" HeightRequest="1" />
+                    </StackLayout>
+                    <!--phone-->
+                    <StackLayout VerticalOptions="Start" HorizontalOptions="FillAndExpand" Spacing="0" Padding="13,0,13,0">
+                        <Label x:Name ="lblphone" Text ="PHONE:" IsVisible ="false" TextColor="#E8E8E8" FontSize="12" />
+                        <StackLayout VerticalOptions="Start" HorizontalOptions="FillAndExpand" Spacing="0" Orientation="Horizontal" Padding="0">
+                            <local:MyEntry x:Name="txtphone" 
+                                       FontSize="15"
+                                           Keyboard="Telephone"
+                                       Focused="txtphone_Focused"
+                                       Unfocused="txtphone_Unfocused" 
+                                       FontFamily="SF UI Display"
+                                       PlaceholderColor="#E8E8E8"
+							           Placeholder="PHONE"
+                                       HorizontalOptions="FillAndExpand" 
+                                       TextColor="#E8E8E8"
+							           HeightRequest="40">
+                            </local:MyEntry>
+                        </StackLayout>
+                        <BoxView BackgroundColor="#E8E8E8" HeightRequest="1"/>
+                    </StackLayout>
+                    <!--checkbox-->
+                    <StackLayout VerticalOptions="Start" HorizontalOptions="FillAndExpand"  Padding="13,0,13,0">
+                        <Label x:Name ="lblGender" Margin="0,10" Text ="GENDER:" TextColor="#E8E8E8" />
+                        <StackLayout Orientation="Horizontal" VerticalOptions="Start" HorizontalOptions="FillAndExpand" Spacing="10">
+                            <StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand">
+                                <Image x:Name="IMGMaleCheck"  Source="ic_check_box" Aspect="AspectFit" HeightRequest="18" WidthRequest="18" Margin="0"/>
+                                <Label Text="Male" TextColor="#E8E8E8" FontSize="16" HorizontalOptions="StartAndExpand" FontAttributes="Bold" />
+                                <StackLayout.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="MaleCheck_Tapped" />
+                                </StackLayout.GestureRecognizers>
+                            </StackLayout>
+                            <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+                                <Image x:Name="IMGFemaleCheck"  Source="ic_check_box_outline" Aspect="AspectFit" HeightRequest="18" WidthRequest="18" Margin="0"/>
+                                <Label Text="Female" TextColor="#E8E8E8" FontSize="16" HorizontalOptions="StartAndExpand" FontAttributes="Bold" />
+                                <StackLayout.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="FeMaleCheck_Tapped" />
+                                </StackLayout.GestureRecognizers>
+                            </StackLayout>
+                        </StackLayout>
+                        <!--errormessage-->
+                        <StackLayout Orientation="Horizontal" VerticalOptions="Start" HorizontalOptions="FillAndExpand" Spacing="10" Padding="14,0">
+                            <Label x:Name ="lblPassError" IsVisible ="false" TextColor="#9B9B9B" FontSize="13" HorizontalOptions="Center" FontAttributes="Bold" />
+                        </StackLayout>
+                    </StackLayout>
+                    <Button  Text="REGISTRATION NOW!" BackgroundColor="#DFC91D" HorizontalOptions="FillAndExpand" VerticalOptions="EndAndExpand" Margin="20,30,20,0" FontSize="18" FontAttributes="Bold" BorderRadius="0" HeightRequest="55" Clicked="Button_Clicked"/>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

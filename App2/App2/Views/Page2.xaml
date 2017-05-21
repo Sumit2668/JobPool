@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin.Abstractions"
+             x:Class="App2.Views.Page2"
+             >
+   <RelativeLayout>
+        <controls:CircleImage x:Name="CircleImg"
+                                Source="icon" Aspect="AspectFill"
+                                HorizontalOptions="CenterAndExpand"
+                                VerticalOptions="CenterAndExpand"
+                                BorderColor="#DFC91D" 
+                                BorderThickness="4"
+                                WidthRequest="60"
+                                HeightRequest="60"
+                                RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,Property=Width, Factor=.5, Constant = 100}"
+                                RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Factor=0.5, Property=Y, Constant=500}">
+        </controls:CircleImage>
+       
+        <RelativeLayout.GestureRecognizers>
+            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
+        </RelativeLayout.GestureRecognizers>
+    </RelativeLayout>
+</ContentPage>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:App2.CustomRenderer"
+             x:Class="App2.Views.LoginPage"
+             BackgroundImage="bg"
+             >
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout  Orientation="Vertical" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"  >
+                <StackLayout Padding="20,10">
+                    <Image x:Name="ImgLogo" Source="logo" Aspect="AspectFit" Margin="40,20" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" />
+                <StackLayout VerticalOptions="Start" HorizontalOptions="Center"  Spacing="0" Orientation="Horizontal" Padding="0">
+                    <Label x:Name ="lblMessage" Text ="" IsVisible ="false" TextColor="Red" FontSize="13" HorizontalOptions="Center" FontAttributes="Bold" />
+                </StackLayout>
+
+                <StackLayout VerticalOptions="Start" HorizontalOptions="FillAndExpand" Spacing="0" Padding="13,0,13,0">
+                    <Label x:Name ="lblFName" Text ="USER NAME:" IsVisible ="false" TextColor="#E8E8E8" FontSize="12" />
+                        <ActivityIndicator x:Name="Loader" IsVisible="False" IsRunning="False" Color="Red" />
+                        <StackLayout VerticalOptions="Start" HorizontalOptions="FillAndExpand" Spacing="0" Orientation="Horizontal" Padding="0">
+                        <local:MyEntry Text="sudheer@gmail.com" x:Name="txtFName" FontSize="15" Focused="FNameHandle_Focused" FontFamily="SF UI Display"  PlaceholderColor="#E8E8E8"
+							Placeholder="USER NAME" HorizontalOptions="FillAndExpand" Unfocused="FNameHandle_Unfocused"  TextColor="#E8E8E8"
+							HeightRequest="40">
+                        </local:MyEntry>
+                        <Image Source="person_white" Aspect="AspectFit" x:Name="Imgusername"/>
+                    </StackLayout>
+                    <BoxView BackgroundColor="#E8E8E8" HeightRequest="1"/>
+                </StackLayout>
+
+                <StackLayout VerticalOptions="Start" HorizontalOptions="FillAndExpand"  Padding="13,0,13,0">
+                    <Label x:Name ="lblPass" Text ="Password:" IsVisible ="false" TextColor="#E8E8E8" FontSize="12" />
+                    <StackLayout VerticalOptions="Start" HorizontalOptions="FillAndExpand" Spacing="0" Orientation="Horizontal" Padding="0">
+                        <local:MyEntry Text="278965" HeightRequest="40" FontFamily="SF UI Display" PlaceholderColor="#E8E8E8"	x:Name="txtPass"  Focused="HandlePassword_Focused" 
+						Unfocused="HandlePassword_Unfocused" FontSize="15" IsPassword="true" Placeholder="Password" TextColor="#E8E8E8" HorizontalOptions="FillAndExpand">
+                        </local:MyEntry>
+                        <Image Source="icon_eye_off" Aspect="AspectFit" x:Name="signupPassshow">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="OnPassShowTepped" />
+                            </Image.GestureRecognizers>
+                        </Image>
+                    </StackLayout>
+                    <BoxView BackgroundColor="#E8E8E8" HeightRequest="1" />
+                    <StackLayout Orientation="Horizontal" VerticalOptions="Start" HorizontalOptions="FillAndExpand" Spacing="10">
+                        <Image x:Name="IMGCheck" Aspect="AspectFit" HeightRequest="15" WidthRequest="15" Margin="0"/>
+                        <Label Text="Remembered Me" TextColor="#E8E8E8" FontSize="13" HorizontalOptions="StartAndExpand" FontAttributes="Bold" Margin="0,5" />
+                        <StackLayout.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="IMGCheck_Tapped" />
+                        </StackLayout.GestureRecognizers>
+                    </StackLayout>
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal" VerticalOptions="Start" HorizontalOptions="FillAndExpand" Spacing="10" Padding="14,0">
+                    <Label x:Name ="lblPassError" IsVisible ="false" TextColor="#9B9B9B" FontSize="13" HorizontalOptions="Center" FontAttributes="Bold" />
+                </StackLayout>
+
+                <StackLayout VerticalOptions="StartAndExpand" HorizontalOptions="CenterAndExpand" Spacing="20" Orientation="Vertical" Padding="16,0,16,0">
+                    <Button x:Name="btnLogin" BackgroundColor="#DFC91D"  FontSize="17" HeightRequest="58" HorizontalOptions="CenterAndExpand" Text="LOGIN NOW!" FontAttributes="Bold" Clicked="btnLogin_Clicked" />
+                    <Label HorizontalOptions="CenterAndExpand" Margin="2">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <!--<Span Text="By signing up, you agree to be bound by&#xA;" FontSize="12"  FontAttributes="Bold"/>-->
+                                <!--<Span Text="&quot;SportsConn's Terms and Conditions&quot;" ForegroundColor="#E8E8E8" FontSize="13" />-->
+                                <Span Text="Forget Password" FontSize="14"  ForegroundColor="#E8E8E8" FontAttributes="Bold"/>
+                            </FormattedString>
+                        </Label.FormattedText>
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnlblWebsiteTepped"  />
+                        </Label.GestureRecognizers>
+                    </Label>
+                </StackLayout>
+                </StackLayout>
+                <Button  Text="REGISTRATION NOW!" BackgroundColor="#DFC91D" HorizontalOptions="FillAndExpand" VerticalOptions="EndAndExpand" Margin="0" FontSize="18" FontAttributes="Bold" BorderRadius="0" HeightRequest="55" Clicked="RegisterNow_Tapped"/>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

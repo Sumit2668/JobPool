@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:App2.CustomRenderer"
+             x:Class="App2.Views.HomePage"
+             BackgroundImage="bg">
+    <ScrollView >
+        <StackLayout>
+            <StackLayout Padding="40,60,40,20" Spacing="20">
+                <StackLayout VerticalOptions="Start" HorizontalOptions="Center"  Spacing="0" Orientation="Horizontal" Padding="0">
+                    <Label x:Name ="lblMessage" Text ="" IsVisible ="false" TextColor="Red" FontSize="13" HorizontalOptions="Center" FontAttributes="Bold" />
+                </StackLayout>
+                <!--Skill-->
+                <StackLayout VerticalOptions="Start" HorizontalOptions="FillAndExpand" Spacing="0" Padding="13,0">
+                    <Label x:Name ="lblSkill" Text ="SKILL,JOB,ROLL:" IsVisible ="false" TextColor="#E8E8E8" FontSize="12" />
+                    <StackLayout VerticalOptions="Start" HorizontalOptions="FillAndExpand" Spacing="0" Orientation="Horizontal" Padding="0">
+                        <local:MyEntry x:Name="txtSkill" 
+                                       FontSize="15" 
+                                       Focused="txtSkill_Focused"
+                                       Unfocused="txtSkill_Unfocused"
+                                       FontFamily="SF UI Display" 
+                                       PlaceholderColor="#E8E8E8"
+							           Placeholder="SKILL,JOB,ROLL"
+                                       HorizontalOptions="FillAndExpand"
+                                       TextColor="#E8E8E8"
+							           HeightRequest="40">
+                        </local:MyEntry>
+                        <Image Source="description" Aspect="AspectFit" />
+                    </StackLayout>
+                    <BoxView BackgroundColor="#E8E8E8" HeightRequest="1"/>
+                </StackLayout>
+                <!--Location-->
+                <StackLayout VerticalOptions="Start" HorizontalOptions="FillAndExpand" Spacing="0" Padding="13,0">
+                    <Label x:Name ="lblLocation"
+                           Text ="CITY:"
+                           IsVisible ="false"
+                           TextColor="#E8E8E8" 
+                           FontSize="12" />
+                    <StackLayout VerticalOptions="Start" 
+                                 HorizontalOptions="FillAndExpand" 
+                                 Orientation="Horizontal">
+                        <local:MyEntry x:Name="txtlocation"
+                                       FontSize="15" 
+                                       Focused="txtlocation_Focused" 
+                                       Unfocused="txtlocation_Unfocused"
+                                       FontFamily="SF UI Display" 
+                                       PlaceholderColor="#E8E8E8"
+							           Placeholder="CITY" 
+                                       HorizontalOptions="FillAndExpand" 
+                                       TextColor="#E8E8E8"
+							           HeightRequest="40">
+                        </local:MyEntry>
+                        <Image Source="location" Aspect="AspectFit" />
+                    </StackLayout>
+                    <BoxView BackgroundColor="#E8E8E8" HeightRequest="1"/>
+                </StackLayout>
+                <!--Button-->
+                <StackLayout>
+                    <Button  Text="FIND CANDIDATES"
+                     BackgroundColor="#DFC91D"
+                     HorizontalOptions="FillAndExpand" 
+                     VerticalOptions="EndAndExpand" 
+                     Margin="20,30,20,0"
+                     FontSize="18"
+                     FontAttributes="Bold"
+                     BorderRadius="2"
+                     Clicked="Button_Clicked">
+                        <Button.HeightRequest>
+                            <OnPlatform x:TypeArguments="x:Double"  iOS="45"   Android="55" />
+                        </Button.HeightRequest>
+                    </Button>
+                </StackLayout>
+            </StackLayout>
+            <StackLayout VerticalOptions="EndAndExpand" >
+          <StackLayout HeightRequest="40" Orientation="Horizontal" VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand" >
+                    <Button  x:Name="btnReg"
+                        Image="register"
+                        Margin="0"
+                         BackgroundColor="Transparent"
+                             HorizontalOptions="EndAndExpand" 
+                             VerticalOptions="EndAndExpand" 
+                             FontSize="18"
+                             FontAttributes="Bold"
+                             BorderRadius="0"
+                            WidthRequest="180"
+                         Clicked="Register_Clicked">
+                        <Button.HeightRequest>
+                            <OnPlatform x:TypeArguments="x:Double"  iOS="45"   Android="55" />
+                        </Button.HeightRequest>
+                    </Button>
+                    <Button  x:Name="btnLog"
+                        Image="login"
+                        Margin="0,0,20,0"
+                         BackgroundColor="Transparent"
+                             HorizontalOptions="EndAndExpand" 
+                             VerticalOptions="EndAndExpand" 
+                             FontSize="18"
+                             FontAttributes="Bold"
+                             BorderRadius="0"
+                             WidthRequest="180"
+                         Clicked="Login_Clicked">
+                        <Button.HeightRequest>
+                            <OnPlatform x:TypeArguments="x:Double"  iOS="45"   Android="55" />
+                        </Button.HeightRequest>
+                    </Button>
+                </StackLayout>
+                <Image Source="or" Aspect="AspectFill" VerticalOptions="StartAndExpand" Margin="2"/>
+                <StackLayout  Padding="0,0,10,0"  Orientation="Horizontal" VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand" >
+                    <Button       x:Name="btnFB"
+                             Image="fb"
+                             BackgroundColor="Transparent"
+                             HorizontalOptions="StartAndExpand" 
+                             VerticalOptions="EndAndExpand" 
+                             FontSize="18"
+                             FontAttributes="Bold"
+                             WidthRequest="180"
+                             Clicked="FB_Clicked">
+                        <Button.HeightRequest>
+                            <OnPlatform x:TypeArguments="x:Double"  iOS="45"   Android="55" />
+                        </Button.HeightRequest>
+                    </Button>
+
+                    <Button  x:Name="btnGoogle"
+                        Image="google"
+                             Margin="0"
+                             BackgroundColor="Transparent"
+                             HorizontalOptions="EndAndExpand" 
+                             VerticalOptions="EndAndExpand" 
+                             FontSize="18"
+                             FontAttributes="Bold"
+                             BorderRadius="0"
+                             WidthRequest="180"
+                         Clicked="Google_Clicked">
+                        <Button.HeightRequest>
+                            <OnPlatform x:TypeArguments="x:Double"  iOS="45"   Android="55" />
+                        </Button.HeightRequest>
+                    </Button>
+                </StackLayout>
+            </StackLayout>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

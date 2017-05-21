@@ -1,0 +1,253 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:App2.CustomRenderer"
+             x:Class="App2.Views.EmployeeRegister"
+             Title="EMPLOYEE REGISTERATION"
+             BackgroundImage="bg"
+             >
+
+    <ScrollView >
+        <StackLayout Padding="20,20,20,0" Spacing="20">
+            <StackLayout VerticalOptions="Start" HorizontalOptions="Center"  Spacing="0" Orientation="Horizontal" Padding="0">
+                <Label x:Name ="lblMessage" Text ="" IsVisible ="false" TextColor="Red" FontSize="13" HorizontalOptions="Center" FontAttributes="Bold" />
+            </StackLayout>
+            <!--COMPANY NAME-->
+            <StackLayout VerticalOptions="Start" HorizontalOptions="FillAndExpand" Spacing="0" Padding="13,0">
+                <Label x:Name ="lblCompanyName"
+                           Text ="COMPANY NAME:"
+                           IsVisible ="false"
+                           TextColor="#E8E8E8" 
+                           FontSize="12" />
+                <StackLayout VerticalOptions="Start" 
+                                 HorizontalOptions="FillAndExpand" 
+                                 Orientation="Horizontal">
+                    <local:MyEntry x:Name="txtCompanyName"
+                                       FontSize="15" 
+                                       Focused="txtCompanyName_Focused" 
+                                       Unfocused="txtCompanyName_Unfocused"
+                                       FontFamily="SF UI Display" 
+                                       PlaceholderColor="#E8E8E8"
+							           Placeholder="COMPANY NAME" 
+                                       HorizontalOptions="FillAndExpand" 
+                                       TextColor="#E8E8E8"
+							           HeightRequest="40">
+                    </local:MyEntry>
+                </StackLayout>
+                <BoxView BackgroundColor="#E8E8E8" HeightRequest="1"/>
+            </StackLayout>
+            <!--CONTACT PERSON-->
+            <StackLayout VerticalOptions="Start" HorizontalOptions="FillAndExpand" Spacing="0" Padding="13,0">
+                <Label x:Name ="lblConPerson" Text ="CONTACT PERSON:" IsVisible ="false" TextColor="#E8E8E8" FontSize="12" />
+                <StackLayout VerticalOptions="Start" HorizontalOptions="FillAndExpand" Spacing="0" Orientation="Horizontal" Padding="0">
+                    <local:MyEntry x:Name="txtConPerson" 
+                                       FontSize="15" 
+                                       Focused="txtConPerson_Focused"
+                                       Unfocused="txtConPerson_Unfocused"
+                                       FontFamily="SF UI Display"  
+                                       PlaceholderColor="#E8E8E8"
+							           Placeholder="CONTACT PERSON" 
+                                       HorizontalOptions="FillAndExpand"
+                                       TextColor="#E8E8E8"
+							           HeightRequest="40">
+                    </local:MyEntry>
+                </StackLayout>
+                <BoxView BackgroundColor="#E8E8E8" HeightRequest="1"/>
+            </StackLayout>
+            <!--EMAIL-->
+            <StackLayout VerticalOptions="Start" HorizontalOptions="FillAndExpand" Spacing="0" Padding="13,0">
+                <Label x:Name ="lblEmail" Text ="EMAIL ID:" IsVisible ="false" TextColor="#E8E8E8" FontSize="12" />
+                <StackLayout VerticalOptions="Start" HorizontalOptions="FillAndExpand" Spacing="0" Orientation="Horizontal" Padding="0">
+                    <local:MyEntry x:Name="txtEmail" 
+                                       FontSize="15" 
+                                       Focused="txtEmail_Focused"
+                                       Unfocused="txtEmail_Unfocused"
+                                       FontFamily="SF UI Display" 
+                                       PlaceholderColor="#E8E8E8"
+							           Placeholder="Email ID"
+                                       HorizontalOptions="FillAndExpand"
+                                       TextColor="#E8E8E8"
+							           HeightRequest="40">
+                    </local:MyEntry>
+                </StackLayout>
+                <BoxView BackgroundColor="#E8E8E8" HeightRequest="1"/>
+            </StackLayout>
+            <!--PHONE-->
+            <StackLayout VerticalOptions="Start" HorizontalOptions="FillAndExpand" Spacing="0" Padding="13,0">
+                <Label x:Name ="lblPhone" Text ="PHONE:" IsVisible ="false" TextColor="#E8E8E8" FontSize="12" />
+                <StackLayout VerticalOptions="Start" HorizontalOptions="FillAndExpand" Spacing="0" Orientation="Horizontal" Padding="0">
+                    <local:MyEntry HeightRequest="40" 
+                                       FontFamily="SF UI Display" 
+                                       PlaceholderColor="#E8E8E8"
+                                       x:Name="txtPhone"
+                                       Focused="txtPhone_Focused" 
+						               Unfocused="txtPhone_Unfocused"
+                                       FontSize="15" 
+                                       Placeholder="PHONE"
+                                       TextColor="#E8E8E8"
+                                       HorizontalOptions="FillAndExpand">
+                    </local:MyEntry>
+                </StackLayout>
+                <BoxView BackgroundColor="#E8E8E8" HeightRequest="1" />
+            </StackLayout>
+            <!--password-->
+            <StackLayout VerticalOptions="Start" HorizontalOptions="FillAndExpand"  Padding="13,0">
+                <Label x:Name ="lblPass" Text ="Password:" IsVisible ="false" TextColor="#E8E8E8" FontSize="12" />
+                <StackLayout VerticalOptions="Start" HorizontalOptions="FillAndExpand" Spacing="0" Orientation="Horizontal" Padding="0">
+                    <local:MyEntry HeightRequest="40" 
+                                   FontFamily="SF UI Display" 
+                                   PlaceholderColor="#E8E8E8"
+                                   x:Name="txtPass" 
+                                   Focused="txtPass_Focused" 
+						           Unfocused="txtPass_Unfocused" 
+                                   FontSize="15" 
+                                   IsPassword="true"
+                                   Placeholder="Password" 
+                                   TextColor="#E8E8E8"
+                                   HorizontalOptions="FillAndExpand">
+                    </local:MyEntry>
+                    <Image Source="icon_eye_off" Aspect="AspectFit" x:Name="signupPassshow">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnPassShowTepped" />
+                        </Image.GestureRecognizers>
+                    </Image>
+                </StackLayout>
+                <BoxView BackgroundColor="#E8E8E8" HeightRequest="1" />
+            </StackLayout>
+            <Label Text ="LOOKING FOR" TextColor="#DFC91D" FontSize="17" Margin="13,0" />
+            <!--Current Requirement-->
+            <StackLayout VerticalOptions="Start" HorizontalOptions="FillAndExpand" Spacing="0" Padding="13,0">
+                <Label x:Name ="lblCurRequi" Text ="CURRENT REQUIREMENT:" IsVisible ="false" TextColor="#E8E8E8" FontSize="12" />
+                <StackLayout VerticalOptions="Start" HorizontalOptions="FillAndExpand" Spacing="0" Orientation="Horizontal" Padding="0">
+                    <local:MyEntry x:Name="txtCurRequi" 
+                                       FontSize="15"
+                                       Focused="txtCurRequi_Focused"
+                                       Unfocused="txtCurRequi_Unfocused" 
+                                       FontFamily="SF UI Display"
+                                       PlaceholderColor="#E8E8E8"
+							           Placeholder="CURRENT REQUIREMENT"
+                                       HorizontalOptions="FillAndExpand" 
+                                       TextColor="#E8E8E8"
+							           HeightRequest="40">
+                    </local:MyEntry>
+                </StackLayout>
+                <BoxView BackgroundColor="#E8E8E8" HeightRequest="1"/>
+            </StackLayout>
+            <!--Exeperiance-->
+            <StackLayout VerticalOptions="Start" HorizontalOptions="FillAndExpand" Spacing="0" Padding="13,0">
+                <Label x:Name ="lblExepEriance" Text ="EXPERIENCE:" IsVisible ="false" TextColor="#E8E8E8" FontSize="12" />
+                <StackLayout VerticalOptions="Start" HorizontalOptions="FillAndExpand" Spacing="0" Orientation="Horizontal" Padding="0">
+                    <local:MyEntry x:Name="txtexeperiance" 
+                                       FontSize="15" 
+                                       Focused="txtexeperiance_Focused"
+                                       Unfocused="txtexeperiance_Unfocused"
+                                       FontFamily="SF UI Display"  
+                                       PlaceholderColor="#E8E8E8"
+							           Placeholder="EXPERIENCE" 
+                                       HorizontalOptions="FillAndExpand"
+                                       TextColor="#E8E8E8"
+							           HeightRequest="40">
+                    </local:MyEntry>
+                    <Image Source="arrow_down" Aspect="AspectFit" />
+                </StackLayout>
+                <BoxView BackgroundColor="#E8E8E8" HeightRequest="1"/>
+            </StackLayout>
+            <!--Skill-->
+            <StackLayout VerticalOptions="Start" HorizontalOptions="FillAndExpand" Spacing="0" Padding="13,0">
+                <Label x:Name ="lblSkill" Text ="SKILL:" IsVisible ="false" TextColor="#E8E8E8" FontSize="12" />
+                <StackLayout VerticalOptions="Start" HorizontalOptions="FillAndExpand" Spacing="0" Orientation="Horizontal" Padding="0">
+                    <local:MyEntry x:Name="txtSkill" 
+                                       FontSize="15" 
+                                       Focused="txtSkill_Focused"
+                                       Unfocused="txtSkill_Unfocused"
+                                       FontFamily="SF UI Display" 
+                                       PlaceholderColor="#E8E8E8"
+							           Placeholder="SKILL"
+                                       HorizontalOptions="FillAndExpand"
+                                       TextColor="#E8E8E8"
+							           HeightRequest="40">
+                    </local:MyEntry>
+                </StackLayout>
+                <BoxView BackgroundColor="#E8E8E8" HeightRequest="1"/>
+            </StackLayout>
+            <!--JON ROLL-->
+            <StackLayout VerticalOptions="Start" HorizontalOptions="FillAndExpand" Spacing="0" Padding="13,0">
+                <Label x:Name ="lblJobRoll" Text ="JOB ROLL:" IsVisible ="false" TextColor="#E8E8E8" FontSize="12" />
+                <StackLayout VerticalOptions="Start" HorizontalOptions="FillAndExpand" Spacing="0" Orientation="Horizontal" Padding="0">
+                    <local:MyEntry HeightRequest="40" 
+                                       FontFamily="SF UI Display" 
+                                       PlaceholderColor="#E8E8E8"
+                                       x:Name="txtJobRoll"
+                                       Focused="txtJobRoll_Focused" 
+						               Unfocused="txtJobRoll_Unfocused"
+                                       FontSize="15" 
+                                       Placeholder="JOB ROLL"
+                                       TextColor="#E8E8E8"
+                                       HorizontalOptions="FillAndExpand">
+                    </local:MyEntry>
+                </StackLayout>
+                <BoxView BackgroundColor="#E8E8E8" HeightRequest="1" />
+            </StackLayout>
+            <!--Location-->
+            <StackLayout VerticalOptions="Start" HorizontalOptions="FillAndExpand" Spacing="0" Padding="13,0">
+                <Label x:Name ="lblLocation"
+                           Text ="LOCATION:"
+                           IsVisible ="false"
+                           TextColor="#E8E8E8" 
+                           FontSize="12" />
+                <StackLayout VerticalOptions="Start" 
+                                 HorizontalOptions="FillAndExpand" 
+                                 Orientation="Horizontal">
+                    <local:MyEntry x:Name="txtlocation"
+                                       FontSize="15" 
+                                       Focused="txtlocation_Focused" 
+                                       Unfocused="txtlocation_Unfocused"
+                                       FontFamily="SF UI Display" 
+                                       PlaceholderColor="#E8E8E8"
+							           Placeholder="LOCATION" 
+                                       HorizontalOptions="FillAndExpand" 
+                                       TextColor="#E8E8E8"
+							           HeightRequest="40">
+                    </local:MyEntry>
+                    <Image Source="arrow_down" Aspect="AspectFit" />
+                </StackLayout>
+                <BoxView BackgroundColor="#E8E8E8" HeightRequest="1"/>
+            </StackLayout>
+            <!--Complete Address-->
+            <StackLayout VerticalOptions="Start" HorizontalOptions="FillAndExpand" Spacing="0" Padding="13,0">
+                <Label x:Name ="lblAddress" Text ="ADDRESS:" IsVisible ="false" TextColor="#E8E8E8" FontSize="12" />
+                <StackLayout VerticalOptions="Start" HorizontalOptions="FillAndExpand" Spacing="0" Orientation="Horizontal" Padding="0">
+                    <local:MyEntry x:Name="txtAddress" 
+                                       FontSize="15"
+                                       Focused="txtAddress_Focused"
+                                       Unfocused="txtAddress_Unfocused" 
+                                       FontFamily="SF UI Display"
+                                       PlaceholderColor="#E8E8E8"
+							           Placeholder="ADDRESS"
+                                       HorizontalOptions="FillAndExpand" 
+                                       TextColor="#E8E8E8"
+							           HeightRequest="40">
+                    </local:MyEntry>
+                </StackLayout>
+                <BoxView BackgroundColor="#E8E8E8" HeightRequest="1"/>
+            </StackLayout>
+            <!--checkbox-->
+            <StackLayout VerticalOptions="Start" HorizontalOptions="FillAndExpand"  Padding="13,0">
+                <StackLayout Orientation="Horizontal" VerticalOptions="Start" HorizontalOptions="FillAndExpand" Spacing="10">
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand">
+                        <Image x:Name="IMGTerms"  Source="ic_check_box_outline" Aspect="AspectFit" HeightRequest="18" WidthRequest="18" Margin="0"/>
+                        <Label Text="Terms &amp; Condition" TextColor="#E8E8E8" FontSize="16" HorizontalOptions="StartAndExpand" FontAttributes="Bold" />
+                        <StackLayout.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="Terms_Tapped" />
+                        </StackLayout.GestureRecognizers>
+                    </StackLayout>
+                </StackLayout>
+                <!--errormessage-->
+                <StackLayout Orientation="Horizontal" VerticalOptions="Start" HorizontalOptions="FillAndExpand" Spacing="10" Padding="14,0">
+                    <Label x:Name ="lblPassError" IsVisible ="false" TextColor="#9B9B9B" FontSize="13" HorizontalOptions="Center" FontAttributes="Bold" />
+                </StackLayout>
+            </StackLayout>
+            <Button  Text="SAVE &amp; CONTINUNS" BackgroundColor="#DFC91D" HorizontalOptions="FillAndExpand" VerticalOptions="EndAndExpand" Margin="20,30,20,0" FontSize="18" FontAttributes="Bold" BorderRadius="0" HeightRequest="55" Clicked="Button_Clicked"/>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

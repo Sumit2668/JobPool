@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<pages:PopupPage xmlns="http://xamarin.com/schemas/2014/forms"
+                xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+                xmlns:animations="clr-namespace:Rg.Plugins.Popup.Animations;assembly=Rg.Plugins.Popup"
+                x:Class="App2.Views.Successfully">
+    <pages:PopupPage.Animation>
+        <animations:ScaleAnimation
+      PositionIn="Center"
+      PositionOut="Center"
+      ScaleIn="1.2"
+      ScaleOut="1.2"
+      DurationIn="400"
+      DurationOut="300"
+      EasingIn="SinOut"
+      EasingOut="SinIn"
+      HasBackgroundAnimation="True"/>
+    </pages:PopupPage.Animation>
+
+    <!--<StackLayout  Orientation="Vertical" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"  >
+        <StackLayout Padding="20,10">
+            <StackLayout VerticalOptions="Start" HorizontalOptions="Center"  Spacing="20" Orientation="Horizontal" Padding="0">
+                <Label x:Name ="lblMessage" FontSize="13" HorizontalOptions="Center" FontAttributes="Bold" />
+                <Button x:Name="btnOK" BackgroundColor="#DFC91D"  FontSize="17" HeightRequest="58" HorizontalOptions="CenterAndExpand" Text="OK" FontAttributes="Bold" Clicked="btnOK_Clicked" />
+            </StackLayout>
+        </StackLayout>
+    </StackLayout>-->
+ <StackLayout >
+        <StackLayout Padding="60,170" >
+            
+                <StackLayout VerticalOptions="Start"
+			                 HorizontalOptions="FillAndExpand" BackgroundColor="#DFC91D">
+                    <StackLayout  VerticalOptions="CenterAndExpand"
+			                    HorizontalOptions="FillAndExpand"
+			                    Orientation="Vertical">
+                        <Label x:Name="lblOK"
+                                Text="Success"
+				                        TextColor="Green"
+				                        FontSize="24"
+						                    FontAttributes="Bold"
+				                        VerticalTextAlignment="Start"
+				                        VerticalOptions="CenterAndExpand"
+				                        HorizontalTextAlignment="Start"
+				                        HorizontalOptions="CenterAndExpand"
+				                        Margin="10"/>
+                        
+                    </StackLayout>
+                <Button x:Name="btnOK" BackgroundColor="Black" TextColor="#DFC91D"  FontSize="17" HeightRequest="55" BorderRadius="0" Margin="0,5" HorizontalOptions="FillAndExpand" Text="SUBMIT" FontAttributes="Bold" Clicked="btnOK_Clicked" />
+            </StackLayout>
+            </StackLayout>
+        
+    </StackLayout>
+</pages:PopupPage>

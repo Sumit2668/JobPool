@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:App2.CustomRenderer"
+             x:Class="App2.Views.Demo">
+    
+    <StackLayout VerticalOptions="Start" HorizontalOptions="FillAndExpand"  Padding="20,20,20,0">
+        <StackLayout VerticalOptions="Start" HorizontalOptions="Center"  Spacing="0" Orientation="Horizontal" Padding="0">
+            <Label x:Name ="lblMessage" Text ="" IsVisible ="false" TextColor="Red" FontSize="13" HorizontalOptions="Center" FontAttributes="Bold" />
+        </StackLayout>
+        <StackLayout VerticalOptions="Start" HorizontalOptions="FillAndExpand" Spacing="0" Padding="13,0,13,0">
+            <Label x:Name ="lblFName" Text ="First Name:" IsVisible ="false" TextColor="#009AE0" FontSize="12" />
+            <StackLayout VerticalOptions="Start" HorizontalOptions="FillAndExpand" Spacing="0" Orientation="Horizontal" Padding="0">
+                <local:MyEntry x:Name="txtFName" FontSize="15" Focused="FNameHandle_Focused" FontFamily="SF UI Display" 
+							Placeholder="First Name *" HorizontalOptions="FillAndExpand" Unfocused="FNameHandle_Unfocused" 
+							HeightRequest="40">
+                    <!--<Entry.Behaviors>
+							<local:RequiredFieldValidatorBehavior x:Name="firstNameValidator" />
+						</Entry.Behaviors>-->
+                </local:MyEntry>
+                <!--<Label Style="{Binding Source={x:Reference firstNameValidator}, &#xD;&#xA; Path=IsValid, &#xD;&#xA; Converter={StaticResource boolToStyleFirstName}}" />-->
+            </StackLayout>
+            <BoxView BackgroundColor="#E8E8E8" HeightRequest="1"/>
+        </StackLayout>
+
+        <StackLayout VerticalOptions="Start" HorizontalOptions="FillAndExpand" Spacing="0" Padding="13,0,13,0">
+            <Label x:Name ="lblLName" Text ="Last Name:" IsVisible ="false" TextColor="#009AE0" FontSize="12" />
+            <StackLayout VerticalOptions="Start" HorizontalOptions="FillAndExpand" Spacing="0" Orientation="Horizontal" Padding="0">
+                <local:MyEntry x:Name="txtLName" FontSize="15" Focused="LNameHandle_Focused" FontFamily="SF UI Display" 
+							Placeholder="Last Name *" HorizontalOptions="FillAndExpand" Unfocused="LNameHandle_Unfocused" 
+							HeightRequest="40">
+                    
+                </local:MyEntry>
+                
+            </StackLayout>
+            <BoxView BackgroundColor="#E8E8E8" HeightRequest="1" />
+        </StackLayout>
+
+        <StackLayout VerticalOptions="Start" HorizontalOptions="FillAndExpand" Spacing="0" Padding="13,0,13,0">
+            <Label x:Name ="lblEmail" Text ="Email:" IsVisible ="false" TextColor="#009AE0" FontSize="12" />
+            <StackLayout VerticalOptions="Start" HorizontalOptions="FillAndExpand" Spacing="0" Orientation="Horizontal" Padding="0">
+                <local:MyEntry x:Name="txtEmail" FontSize="15" Focused="EmailHandle_Focused" FontFamily="SF UI Display" 
+							Placeholder="Email *" HorizontalOptions="FillAndExpand" Unfocused="EmailHandle_Unfocused"  Keyboard="Email"
+							HeightRequest="40" >
+
+                </local:MyEntry>
+                <!--<Label Style="{Binding Source={x:Reference emailValidator}, &#xD;&#xA; Path=IsValid, &#xD;&#xA; Converter={StaticResource boolToStyleEmail}}" />-->
+            </StackLayout>
+            <BoxView BackgroundColor="#E8E8E8" HeightRequest="1" />
+        </StackLayout>
+
+        <StackLayout VerticalOptions="Start" HorizontalOptions="FillAndExpand" Spacing="0" Padding="13,0,13,0">
+            <Label x:Name ="lblPass" Text ="Password:" IsVisible ="false" TextColor="#009AE0" FontSize="12" />
+            <StackLayout VerticalOptions="Start" HorizontalOptions="FillAndExpand" Spacing="0" Orientation="Horizontal" Padding="0">
+                <local:MyEntry 
+						HeightRequest="40" FontFamily="SF UI Display" 	x:Name="txtPass" TextChanged="Handle_TextChanged" Focused="HandlePassword_Focused" 
+						Unfocused="HandlePassword_Unfocused" FontSize="15" IsPassword="true" Placeholder="Password (Minimum 6 Characters) *" HorizontalOptions="FillAndExpand">
+                </local:MyEntry>
+                <Image Source="icon_eye_off" Aspect="AspectFit" x:Name="signupPassshow">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnPassShowTepped" />
+                    </Image.GestureRecognizers>
+                </Image>
+            </StackLayout>
+            <BoxView BackgroundColor="#E8E8E8" HeightRequest="1" />
+        </StackLayout>
+
+        <StackLayout Orientation="Horizontal" VerticalOptions="Start" HorizontalOptions="FillAndExpand" Spacing="10" Padding="14,0">
+            <!--<Label HorizontalTextAlignment="Start" Style="{Binding Source={x:Reference passwordValidator}, &#xD;&#xA; Path=IsValid, &#xD;&#xA; Converter={StaticResource boolToStylePassword}}" />-->
+            <Label x:Name ="lblPassError" IsVisible ="false" TextColor="#9B9B9B" FontSize="13" HorizontalOptions="Center" FontAttributes="Bold" />
+        </StackLayout>
+
+        <!--<StackLayout VerticalOptions="Start" HorizontalOptions="FillAndExpand" Spacing="0" Orientation="Horizontal" Padding="16,0,10,0">
+					<Label x:Name ="lblPassError" IsVisible ="false" TextColor="#9B9B9B" FontSize="13" HorizontalOptions="Center" FontAttributes="Bold" />
+				</StackLayout>-->
+
+        <StackLayout VerticalOptions="Start" HorizontalOptions="CenterAndExpand" Spacing="20" Orientation="Vertical" Padding="16,0,16,0">
+            <Label>
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="By signing up, you agree to be bound by&#xA;" FontSize="12" FontAttributes="Bold"/>
+                        <Span Text="&quot;SportsConn's Terms and Conditions&quot;" ForegroundColor="#009ae0" FontSize="13" />
+                    </FormattedString>
+                </Label.FormattedText>
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnlblWebsiteTepped"  />
+                </Label.GestureRecognizers>
+            </Label>
+            <Button BackgroundColor="#009ae0" FontSize="17" x:Name="btnSignup"
+					HeightRequest="58" HorizontalOptions="FillAndExpand" Text="Sign Up" TextColor="White" FontAttributes="Bold" Clicked="Signup_Clicked" />
+        </StackLayout>
+
+        <!--<Label Margin="0,13,0,13" Text="OR USE" HorizontalOptions="Center" 
+				 FontSize="12" />-->
+
+        <Image Source="or" Aspect="AspectFit" Margin="0,13,0,0"
+                        HeightRequest="30"
+                        WidthRequest="30"                                      
+                 />
+        <StackLayout VerticalOptions="Start" HorizontalOptions="CenterAndExpand" Spacing="5" Orientation="Horizontal" Padding="5">
+
+            <!--<Image Source="Facebook" Aspect="AspectFit" >
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="SocialFB_Tapped" />
+                </Image.GestureRecognizers>
+            </Image>
+
+            <Image Source="Twitter2" Aspect="AspectFit" >
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="SocialTW_Tapped" />
+                </Image.GestureRecognizers>
+            </Image>
+
+            <Image Source="Google" Aspect="AspectFit" >
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="SocialGoogle_Tapped" />
+                </Image.GestureRecognizers>
+            </Image>
+
+            <Image Source="Linkedin2" Aspect="AspectFit" >
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="SocialLIn_Tapped" />
+                </Image.GestureRecognizers>
+            </Image>-->
+
+        </StackLayout>
+    </StackLayout>
+</ContentPage>
