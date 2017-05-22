@@ -16,15 +16,24 @@ namespace App2.Views
         {
             InitializeComponent();
         }
+        
+        private void txtEmailID_Focused(object sender, EventArgs e)
+        {
+            
+        }
 
-        private void btnChangePass_Clicked(object sender, EventArgs e)
+        private void txtEmailID_Unfocused(object sender, EventArgs e)
         {
 
+        }
+        private void btnChangePass_Clicked(object sender, EventArgs e)
+        {
+            
         }
         
         private void NewPassword_Tapped(object sender, EventArgs e)
         {
-
+            
         }
         
         private void OnOldPass_Tapped(object sender, EventArgs e)
@@ -42,16 +51,11 @@ namespace App2.Views
         }
         private async void OldPassword_Focused(object sender, EventArgs e)
         {
-            await Task.Delay(100);
-            
-            t.Placeholder = string.Empty;
-            lblCompanyName.IsVisible = true;
-
+           
         }
         private void OldPassword_Unfocused(object sender, EventArgs e)
         {
-            txtCompanyName.Placeholder = "COMPANY NAME";
-            lblCompanyName.IsVisible = false;
+           
         }
     }
 }
