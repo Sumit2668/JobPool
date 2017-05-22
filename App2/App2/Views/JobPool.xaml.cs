@@ -17,6 +17,7 @@ namespace App2.Views
         {
             InitializeComponent();
             LoadData();
+           
         }
 
 		protected override void OnAppearing()
@@ -26,20 +27,18 @@ namespace App2.Views
 			{
 				if (Device.OS == TargetPlatform.iOS)
 				{ 
-				if (Application.Current.MainPage.Height > 0)
+				    if (Application.Current.MainPage.Height > 0)
 					{
 						var calcScreenHieght = Application.Current.MainPage.Height;
 						MainGrid.HeightRequest = calcScreenHieght / 2 + 150;
-
-					}
+                    }
 				}
 				else
 				{
 					if (Application.Current.MainPage.Height > 0)
 					{
 						var calcScreenHieght = Application.Current.MainPage.Height;
-						MainGrid.HeightRequest = calcScreenHieght / 2 + 45;
-
+						MainGrid.HeightRequest = calcScreenHieght / 2 + 190;
 					}
 				}
 			});

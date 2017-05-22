@@ -3,8 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:App2.CustomRenderer"
              x:Class="App2.Views.LoginPage"
-             BackgroundImage="bg"
-             >
+             BackgroundImage="bg">
     <ContentPage.Content>
         <ScrollView>
             <StackLayout  Orientation="Vertical" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"  >
