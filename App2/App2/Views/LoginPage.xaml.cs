@@ -242,6 +242,7 @@ namespace App2.Views
             {
                 try
                 {
+                    btnLogin.IsEnabled = false;
                     api = new JobPoolAPI();
                     Loader.IsVisible = true; Loader.IsRunning = true;
                     usermodel = api.postLogin(txtFName.Text, txtPass.Text);
@@ -251,6 +252,7 @@ namespace App2.Views
                         await PopupNavigation.PushAsync(new Successfully(usermodel.Message));
                     }
                     Loader.IsVisible = false; Loader.IsRunning = false;
+                    btnLogin.IsEnabled = true;
                 }
                 catch
                 {

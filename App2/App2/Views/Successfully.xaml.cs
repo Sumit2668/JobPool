@@ -44,9 +44,14 @@ namespace App2.Views
         {
             if (lblOK.Text == "Login Successfully")
             {
-                Navigation.PushModalAsync(new MainPage());
+               await Navigation.PushModalAsync(new MainPage());
             }
-            await PopupNavigation.PopAsync(true);
+            else if (lblOK.Text == "Your Password has been updated Successfully.")
+            {
+                await Navigation.PushModalAsync(new MainPage());
+            }
+
+                await PopupNavigation.PopAsync(true);
 
         }
     }

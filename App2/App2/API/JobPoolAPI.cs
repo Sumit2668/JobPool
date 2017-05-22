@@ -88,12 +88,6 @@ namespace App2.API
                     response_model = new ResponseModel();
                     var dataObjects = response.Content.ReadAsStringAsync().Result;
                     JObject jObj = JObject.Parse(dataObjects);
-                    //foreach (var data in jObj["Data"])
-                    //{
-                    //    sportsmodel = new SportsModel();
-                    //    sportsmodel.SportsID = Convert.ToInt32(data["SportsID"].ToString());
-                    //    listSportModel.Add(sportsmodel);
-                    //}
                     response_model.Error = jObj["error"].ToString();
                     response_model.Message = jObj["message"].ToString();
                     response_model.RCCode = jObj["rccode"].ToString();
@@ -136,12 +130,6 @@ namespace App2.API
                     // Parse the response body. Blocking!
                     var dataObjects = response.Content.ReadAsStringAsync().Result;
                     JObject jObj = JObject.Parse(dataObjects);
-					//foreach (var data in jObj["Data"])
-					//{
-					//    sportsmodel = new SportsModel();
-					//    sportsmodel.SportsID = Convert.ToInt32(data["SportsID"].ToString());
-					//    listSportModel.Add(sportsmodel);
-					//}
 					response_model.UserID = jObj["data"]["user_id"].ToString();
 					response_model.UserName = jObj["data"]["username"].ToString();
 					response_model.EmailID = jObj["data"]["email"].ToString();
@@ -230,6 +218,47 @@ namespace App2.API
                 if (response.IsSuccessStatusCode)
                 {
                     response_model = new ResponseModel();
+                    var dataObjects = response.Content.ReadAsStringAsync().Result;
+                    JObject jObj = JObject.Parse(dataObjects);
+                    response_model.Error = jObj["error"].ToString();
+                    response_model.Message = jObj["message"].ToString();
+                    response_model.RCCode = jObj["rccode"].ToString();
+                    response_model.Success = jObj["success"].ToString();
+                }
+
+            }
+            catch (Exception e)
+            {
+                StaticMethods.AndroidSnackBar(e.Message);
+            }
+            finally
+            {
+                content = null;
+            }
+            return response_model;
+        }
+        public ResponseModel postChangePassword(string Email, string OldPass, string NewPass)
+        {
+            ResponseModel response_model = new ResponseModel();
+            StringContent content;
+            try
+            {
+                var RestURL = BaseURL + "candidate_changed_password";
+                HttpClient client = new HttpClient();
+                client.BaseAddress = new Uri(RestURL);
+
+                JObject j = new JObject();
+                j.Add("email", Email);
+                j.Add("old_password", OldPass);
+                j.Add("new_password", NewPass);
+
+                var json = JsonConvert.SerializeObject(j);
+                content = new StringContent(json, Encoding.UTF8, "application/json");
+
+                HttpResponseMessage response = client.PostAsync(RestURL, content).Result; // Blocking call!
+                if (response.IsSuccessStatusCode)
+                {
+
                     // Parse the response body. Blocking!
                     var dataObjects = response.Content.ReadAsStringAsync().Result;
                     JObject jObj = JObject.Parse(dataObjects);
