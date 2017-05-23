@@ -7,11 +7,11 @@
              Title="JOB POOL"
              BackgroundColor="#EFEEEE">
     <ContentPage.Content>
-            <StackLayout>
+            <StackLayout Padding="0" Margin="0">
                 <Grid x:Name="MainGrid">
                     <Image Source="bg" Aspect="AspectFill" />
                     <StackLayout>
-                        <StackLayout Padding="20" Spacing="20">
+                        <StackLayout Padding="40,20,20,20" Spacing="25">
                             <!--Skill-->
                             <StackLayout VerticalOptions="Start" HorizontalOptions="FillAndExpand" Spacing="0" Padding="13,0">
                                 <Label x:Name ="lblSkill" Text ="SKILL,JOB,ROLL:" IsVisible ="false" TextColor="#E8E8E8" FontSize="12" />
@@ -58,75 +58,76 @@
                             </StackLayout>
                             <!--Button-->
                             <StackLayout>
-                                <Button  Text="FIND CANDIDATES"
-                     BackgroundColor="#DFC91D"
-                     HorizontalOptions="FillAndExpand" 
-                     VerticalOptions="EndAndExpand" 
-                    FontSize="18"
-                     FontAttributes="Bold"
-                     BorderRadius="2"
-                     HeightRequest="55" 
-                     Clicked="Button_Clicked"/>
+                                <Button  Text="SEARCH NOW!"
+                                         BackgroundColor="#DFC91D"
+                                         HorizontalOptions="FillAndExpand" 
+                                         VerticalOptions="EndAndExpand" 
+                                        FontSize="18"
+                                         FontAttributes="Bold"
+                                         BorderRadius="2"
+                                         HeightRequest="55" 
+                                         Clicked="Button_Clicked"/>
                             </StackLayout>
                         </StackLayout>
                         <Image Source="curve" Aspect="AspectFill" Margin="0" VerticalOptions="EndAndExpand"/>
                     </StackLayout>
                 </Grid>
             <AbsoluteLayout x:Name="ABSLlayout" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" >
-                <StackLayout BackgroundColor="#EFEEEE" Margin="0" Padding="0" Grid.Row="0" Grid.Column="0">
+                <StackLayout BackgroundColor="#EFEEEE" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
                     <ListView x:Name="MainListView"
-                VerticalOptions="FillAndExpand"
-                HorizontalOptions="FillAndExpand"
-				BackgroundColor="Transparent"
-				HasUnevenRows="True"
-                      ItemTapped="MainListView_ItemTapped">
+                            VerticalOptions="FillAndExpand"
+                            HorizontalOptions="FillAndExpand"
+				            BackgroundColor="Transparent"
+				            HasUnevenRows="True"
+                            SeparatorVisibility="Default"
+                            SeparatorColor="Gray"
+                             ItemTapped="MainListView_ItemTapped">
                         <ListView.ItemTemplate>
                             <DataTemplate>
                                 <ViewCell>
                                     <Grid  >
                                         <StackLayout  VerticalOptions="StartAndExpand"
                                                      Orientation="Vertical"
-                                                     Padding="20,0"
-                                                     Spacing="1">
+                                                     Padding="30,0"
+                                                      Spacing="0">
                                             <Label Text="{Binding CandidateName}"
                                                        TextColor="Black"
-                                                       FontSize="18"
+                                                       FontSize="16"
                                                        HorizontalOptions="StartAndExpand"
                                                        FontAttributes="Bold" />
-                                            <StackLayout Orientation="Horizontal"  VerticalOptions="Start" HorizontalOptions="FillAndExpand" Spacing="10">
+                                            <StackLayout Orientation="Horizontal"  VerticalOptions="Start" HorizontalOptions="FillAndExpand">
                                                 <StackLayout x:Name="stkShow"  Orientation="Horizontal" HorizontalOptions="StartAndExpand">
-                                                    <Image  Source="{Binding ImgCity}"  Aspect="AspectFit" HeightRequest="18" WidthRequest="18" Margin="0.3"/>
-                                                    <Label Text="{Binding City}" TextColor="Black" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" FontSize="14" HorizontalOptions="StartAndExpand"  />
-                                                    <Image   Source="{Binding ImgYear}"  Aspect="AspectFit" HeightRequest="18" WidthRequest="18" Margin="0.3"/>
-                                                    <Label Text="{Binding Year}" TextColor="Black" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" FontSize="14" HorizontalOptions="StartAndExpand"  />
+                                                    <Image  Source="{Binding ImgCity}"  Aspect="AspectFit" HeightRequest="16" WidthRequest="16"/>
+                                                    <Label Text="{Binding City}" TextColor="Black" FontAttributes="Bold" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" FontSize="12" HorizontalOptions="StartAndExpand"/>
+                                                    <Image   Source="{Binding ImgYear}"  Aspect="AspectFit" HeightRequest="16" WidthRequest="16"/>
+                                                    <Label Text="{Binding Year}" TextColor="Black" FontAttributes="Bold" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" FontSize="12" HorizontalOptions="StartAndExpand"/>
                                                 </StackLayout>
-                                                <Button x:Name="btnShow" BackgroundColor="#DFC91D" Text="Show Interest" TextColor="Black" HorizontalOptions="EndAndExpand" 
-                                                    FontSize="12" WidthRequest="130"  Margin="0" >
+                                                <Button x:Name="btnShow" BackgroundColor="#DFC91D" Text="Show Interest" TextColor="Black" HorizontalOptions="EndAndExpand" FontAttributes="Bold"
+                                                    FontSize="11" WidthRequest="125" >
                                                     <Button.HeightRequest>
                                                         <OnPlatform   x:TypeArguments="x:Double" iOS="30" Android="40" />
                                                     </Button.HeightRequest>
                                                 </Button>
 
                                             </StackLayout>
-                                            <StackLayout Orientation="Horizontal" VerticalOptions="Start" HorizontalOptions="FillAndExpand" Spacing="10">
-                                                <StackLayout x:Name="stkcontact"  Orientation="Horizontal"  HorizontalOptions="StartAndExpand">
-                                                    <Image  Source="{Binding ImgProfession}"  Aspect="AspectFit" HeightRequest="18" WidthRequest="18" Margin="0.3"/>
-                                                    <Label Text="{Binding Profession}" TextColor="Black" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" FontSize="14" HorizontalOptions="StartAndExpand"  />
+                                            <StackLayout Orientation="Horizontal" VerticalOptions="Start" HorizontalOptions="FillAndExpand" >
+                                                <StackLayout x:Name="stkcontact" Orientation="Horizontal"  HorizontalOptions="StartAndExpand">
+                                                    <Image  Source="{Binding ImgProfession}"  Aspect="AspectFit" HeightRequest="16" WidthRequest="16"/>
+                                                    <Label Text="{Binding Profession}" FontAttributes="Bold" TextColor="Black" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" FontSize="12" HorizontalOptions="StartAndExpand" />
                                                 </StackLayout>
                                                 <Button  x:Name="btnContacts"
-                                                 BackgroundColor="Black" 
-											     TextColor="#DFC91D" 
-											     Margin="0"
-											     Text="Contects" 
-											     HorizontalOptions="EndAndExpand" 
-                                                 FontSize="12"
-										         WidthRequest="130">
+                                                             BackgroundColor="Black" 
+											                 TextColor="White" 
+											                 FontAttributes="Bold"
+											                 Text="Contects" 
+											                 HorizontalOptions="EndAndExpand" 
+                                                             FontSize="11"
+										                     WidthRequest="125">
                                                     <Button.HeightRequest>
                                                         <OnPlatform   x:TypeArguments="x:Double" iOS="30" Android="40" />
                                                     </Button.HeightRequest>
                                                 </Button>
                                             </StackLayout>
-                                            <BoxView Color="Black" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" HeightRequest="1"/>
                                         </StackLayout>
                                     </Grid>
                                 </ViewCell>
@@ -138,30 +139,26 @@
 
                 </StackLayout>
         
-            <Image Source="filter"
-        VerticalOptions="FillAndExpand"
-        HorizontalOptions="FillAndExpand"
-        AbsoluteLayout.LayoutBounds=".01,.98, 45, 45"
-        AbsoluteLayout.LayoutFlags="PositionProportional"
-        x:Name="deleteCard">
-                <Image.GestureRecognizers>
-                    <TapGestureRecognizer  />
-                </Image.GestureRecognizers>
-            </Image>
-
-            <Image Source="filter"
-              VerticalOptions="FillAndExpand"
-              HorizontalOptions="FillAndExpand"
-              AbsoluteLayout.LayoutBounds="1,.99, 65, 65"
-              AbsoluteLayout.LayoutFlags="PositionProportional" >
-                <Image.GestureRecognizers>
-                    <TapGestureRecognizer />
-                </Image.GestureRecognizers>
-            </Image>
-
-
-
-        </AbsoluteLayout>
+                <StackLayout HorizontalOptions="EndAndExpand"
+                                            VerticalOptions="EndAndExpand"
+                                            AbsoluteLayout.LayoutBounds=".97,.97, 65, 65"
+                                            AbsoluteLayout.LayoutFlags="PositionProportional" >
+                <controls:CircleImage x:Name="CircleImg"
+                                            Source="filter" 
+											Aspect="AspectFill"
+                                            >
+                    <controls:CircleImage.WidthRequest>
+                        <OnPlatform x:TypeArguments="x:Double" iOS="60" Android="50" />
+                    </controls:CircleImage.WidthRequest>
+                    <controls:CircleImage.HeightRequest>
+                        <OnPlatform x:TypeArguments="x:Double" iOS="60" Android="50" />
+                    </controls:CircleImage.HeightRequest>
+                </controls:CircleImage>
+                    <StackLayout.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="Circle_Tapped" />
+                </StackLayout.GestureRecognizers>
+                </StackLayout>
+            </AbsoluteLayout>
         </StackLayout>
     
     </ContentPage.Content>

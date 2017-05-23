@@ -17,7 +17,6 @@ namespace App2.Views
         {
             InitializeComponent();
             LoadData();
-           
         }
 
 		protected override void OnAppearing()
@@ -93,6 +92,11 @@ namespace App2.Views
         private void MainListView_ItemTapped(object sender, ItemTappedEventArgs e)
         {
             ((ListView)sender).SelectedItem = null;
+        }
+
+        private void Circle_Tapped(object sender, EventArgs e)
+        {
+            Navigation.PushModalAsync(new JobPoolList());
         }
     }
 }
