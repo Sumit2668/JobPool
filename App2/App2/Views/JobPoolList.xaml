@@ -6,7 +6,6 @@
              x:Class="App2.Views.JobPoolList"
              Title="JOB LIST"
              BackgroundColor="#EFEEEE">
-    
     <StackLayout BackgroundColor="#EFEEEE" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
         <ListView x:Name="MainListView"
                             VerticalOptions="FillAndExpand"

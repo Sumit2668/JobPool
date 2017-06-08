@@ -23,12 +23,13 @@ namespace App2
 			// icon on the left side, and page that you want to open after selection
 			var page1 = new MasterPageItem() { Title = "Profie", Icon = "person_black.png", TargetType = typeof(Candidate) };
 			var page2 = new MasterPageItem() { Title = "Search Candidates", Icon = "search.png", TargetType = typeof(EmployeeRegister) };
-			var page3 = new MasterPageItem() { Title = "Notification", Icon = "notifications.png", TargetType = typeof(FranchiseReg) };
-			var page4 = new MasterPageItem() { Title = "About Us", Icon = "about_us.png", TargetType = typeof(AboutUs) };
-			var page5 = new MasterPageItem() { Title = "Change Password", Icon = "password.png", TargetType = typeof(ChangePassword) };
-			var page6 = new MasterPageItem() { Title = "Privacy Policy", Icon = "assignment.png", TargetType = typeof(CandidateReg) };
-			var page7 = new MasterPageItem() { Title = "Terms & Conditions", Icon = "terms.png", TargetType = typeof(HomePage) };
-			var page8 = new MasterPageItem() { Title = "Logout", Icon = "logout.png", TargetType = typeof(LoginPage) };
+            var page3 = new MasterPageItem() { Title = "Payment", Icon = "FPayBlack.png", TargetType = typeof(EmployeeRegister) };
+            var page4 = new MasterPageItem() { Title = "Notification", Icon = "notifications.png", TargetType = typeof(FranchiseReg) };
+			var page5 = new MasterPageItem() { Title = "About Us", Icon = "about_us.png", TargetType = typeof(AboutUs) };
+			var page6 = new MasterPageItem() { Title = "Change Password", Icon = "password.png", TargetType = typeof(ChangePassword) };
+			var page7 = new MasterPageItem() { Title = "Privacy Policy", Icon = "assignment.png", TargetType = typeof(CandidateReg) };
+			var page8 = new MasterPageItem() { Title = "Terms & Conditions", Icon = "terms.png", TargetType = typeof(HomePage) };
+			var page9 = new MasterPageItem() { Title = "Logout", Icon = "logout.png", TargetType = typeof(LoginPage) };
 
 			// Adding menu items to menuList
 			menuList.Add(page1);
@@ -39,9 +40,9 @@ namespace App2
 			menuList.Add(page6);
 			menuList.Add(page7);
 			menuList.Add(page8);
-
-			// Setting our list to be ItemSource for ListView in MainPage.xaml
-			navigationDrawerList.ItemsSource = menuList;
+            menuList.Add(page9);
+            // Setting our list to be ItemSource for ListView in MainPage.xaml
+            navigationDrawerList.ItemsSource = menuList;
 
 			// Initial navigation, this can be used for our home page
 			Detail = new NavigationPage((Page)Activator.CreateInstance(typeof(JobPool)));

@@ -7,61 +7,84 @@
                 x:Class="App2.Views.ForgatePass"
                  Title="Forgate Password"
                  >
-    <pages:PopupPage.Animation>
-        <animations:ScaleAnimation
-      PositionIn="Center"
-      PositionOut="Center"
-      ScaleIn="1.2"
-      ScaleOut="1.2"
-      DurationIn="400"
-      DurationOut="300"
-      EasingIn="SinOut"
-      EasingOut="SinIn"
-      HasBackgroundAnimation="True"/>
-    </pages:PopupPage.Animation>
+  <pages:PopupPage.Animation>
+    <animations:ScaleAnimation
+  PositionIn="Center"
+  PositionOut="Center"
+  ScaleIn="1.2"
+  ScaleOut="1.2"
+  DurationIn="400"
+  DurationOut="300"
+  EasingIn="SinOut"
+  EasingOut="SinIn"
+  HasBackgroundAnimation="True"/>
+  </pages:PopupPage.Animation>
 
-    <StackLayout >
-        <StackLayout Padding="60,170" >
-            
-                <StackLayout VerticalOptions="Start"
-			                 HorizontalOptions="FillAndExpand" BackgroundColor="#DFC91D">
-                    <StackLayout  VerticalOptions="CenterAndExpand"
-			                    HorizontalOptions="FillAndExpand"
-			                    Orientation="Vertical">
-                        <Label Text="FORGOT PASSWORD"
-				                TextColor="Black"
-				                FontSize="18"
-						        FontAttributes="Bold"
-				                VerticalTextAlignment="Start"
-				                VerticalOptions="CenterAndExpand"
-				                HorizontalTextAlignment="Start"
-				                HorizontalOptions="CenterAndExpand"
-				                Margin="10"/>
-                        <StackLayout VerticalOptions="Start" HorizontalOptions="Center"  Spacing="0" Orientation="Horizontal" Padding="0">
-                            <Label x:Name ="lblMessage" Text ="" IsVisible ="false" TextColor="Red" FontSize="13" HorizontalOptions="Center" FontAttributes="Bold" />
-                        </StackLayout>
+  <StackLayout >
+    <StackLayout Padding="60,170" >
 
-                    <StackLayout VerticalOptions="Start" HorizontalOptions="FillAndExpand" Padding="20">
-                            <Label x:Name ="lblMail" Text ="EMAIL:" IsVisible ="false" TextColor="#E8E8E8" FontSize="12" />
-                            <StackLayout VerticalOptions="Start" HorizontalOptions="FillAndExpand" Spacing="0" Orientation="Horizontal" Padding="0" Margin="0" >
-                                <local:MyEntry x:Name="txtEmail" 
-                                   FontSize="15" 
-                                   Focused="Email_Focused"
-                                   Unfocused="Email_Unfocused"  
-                                   PlaceholderColor="#E8E8E8"
-							       HorizontalOptions="CenterAndExpand"
-                                    HorizontalTextAlignment="Center"
-                                    Placeholder="Enter your mail id" 
-                                   TextColor="#E8E8E8"
-							        HeightRequest="40">
-                                </local:MyEntry>
-                            </StackLayout>
-                            <BoxView BackgroundColor="#E8E8E8" HeightRequest="1"/>
-                        </StackLayout>
-                    </StackLayout>
-                <Button x:Name="btnForgate" BackgroundColor="Black" TextColor="#DFC91D"  FontSize="17" HeightRequest="55" BorderRadius="0" Margin="0,5" HorizontalOptions="FillAndExpand" Text="SUBMIT" FontAttributes="Bold" Clicked="btnForgate_Clicked" />
+      <StackLayout VerticalOptions="Start"
+             HorizontalOptions="FillAndExpand" BackgroundColor="#DFC91D">
+        <StackLayout  VerticalOptions="CenterAndExpand"
+              HorizontalOptions="FillAndExpand"
+              Orientation="Vertical">
+          <Label Text="FORGOT PASSWORD"
+          TextColor="Black"
+          FontSize="16"
+          FontAttributes="Bold"
+          VerticalTextAlignment="Start"
+          VerticalOptions="CenterAndExpand"
+          HorizontalTextAlignment="Start"
+          HorizontalOptions="CenterAndExpand"
+          Margin="10"/>
+          <BoxView BackgroundColor="#CBB509" HeightRequest="1"/>
+          <StackLayout VerticalOptions="Start" HorizontalOptions="Center"  Spacing="0" Orientation="Horizontal" Padding="0">
+            <Label x:Name ="lblMessage" Text ="" IsVisible ="false" TextColor="Red" FontSize="13" HorizontalOptions="Center" FontAttributes="Bold" />
+          </StackLayout>
+          <StackLayout VerticalOptions="Start" HorizontalOptions="FillAndExpand" Padding="15">
+            <Label x:Name ="lblMail" Text ="EMAIL:" IsVisible ="false" TextColor="Black" FontSize="12" />
+            <StackLayout VerticalOptions="Start" HorizontalOptions="FillAndExpand" Spacing="0" Orientation="Horizontal" Padding="0" Margin="0" >
+              <local:MyEntry x:Name="txtEmail"
+                             FontSize="12"
+                             Focused="Email_Focused"
+                             Unfocused="Email_Unfocused"
+                             PlaceholderColor="Black"
+                             HorizontalOptions="FillAndExpand"
+                             HorizontalTextAlignment="Start"
+                             Placeholder="Enter your mail id"
+                             TextColor="Black"
+                             HeightRequest="40">
+              </local:MyEntry>
             </StackLayout>
-            </StackLayout>
-        
+            <BoxView BackgroundColor="Black" HeightRequest="1"/>
+          </StackLayout>
+        </StackLayout>
+        <Label Text="SUBMIT" x:Name="btnForgate" 
+            FontAttributes="Bold" 
+               TextColor="#DFC91D" 
+               HorizontalOptions="FillAndExpand" 
+               BackgroundColor="Black" 
+               Margin="0,5"
+               HeightRequest="55"
+               VerticalTextAlignment="Center"
+               HorizontalTextAlignment="Center" 
+               FontSize="15" >
+         <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="btnForgate_Clicked" />
+                </Label.GestureRecognizers>
+            </Label>
+    <!--<Button x:Name="btnForgate" 
+            BackgroundColor="Black" 
+            TextColor="#DFC91D"  
+            FontSize="17" 
+            HeightRequest="55"  
+            BorderRadius="0"
+            Margin="0"
+            HorizontalOptions="StartAndExpand" 
+            Text="SUBMIT" 
+            FontAttributes="Bold" 
+            Clicked="btnForgate_Clicked" />-->    
+      </StackLayout>
     </StackLayout>
+  </StackLayout>
 </pages:PopupPage>

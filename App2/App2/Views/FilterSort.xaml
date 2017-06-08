@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+             xmlns:animations="clr-namespace:Rg.Plugins.Popup.Animations;assembly=Rg.Plugins.Popup"
+             x:Class="App2.Views.FilterSort"
+             Title="FILTER"
+             Padding="0">
+    <!--<pages:PopupPage.Animation>
+        <animations:ScaleAnimation
+          PositionIn="Center"
+          PositionOut="Center"
+          ScaleIn="1.2"
+          ScaleOut="1.2"
+          DurationIn="400"
+          DurationOut="300"
+          EasingIn="SinOut"
+          EasingOut="SinIn"
+          HasBackgroundAnimation="True"/>
+    </pages:PopupPage.Animation>-->
+    <ScrollView>
+        <Grid BackgroundColor="#CBB509" ColumnSpacing="0">
+        <Grid.RowDefinitions>
+        <RowDefinition x:Name="Row0" Height="*"/>
+        <RowDefinition x:Name="Row1" Height="*"/>
+        <RowDefinition x:Name="Row2" Height="*"/>
+        <RowDefinition x:Name="Row3" Height="*"/>
+        <RowDefinition x:Name="Row4" Height="*"/>
+        <RowDefinition x:Name="Row5" Height="*"/>
+        <RowDefinition x:Name="Row6" Height="*"/>
+        <RowDefinition x:Name="Row7" Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+        <ColumnDefinition x:Name="Column1" Width="*"/>
+        <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Image BackgroundColor="White" x:Name="FSort" Margin="0" Aspect="AspectFit" Source="FSort" Grid.Row="0" Grid.Column="0"/>
+        <Image BackgroundColor="#CBB509" x:Name="FSalary" Margin="0" Aspect="AspectFit" Source="FSalary" Grid.Row="1" Grid.Column="0"/>
+        <Image BackgroundColor="#CBB509" x:Name="FLocation" Margin="0" Aspect="AspectFit" Source="FLocation" Grid.Row="2" Grid.Column="0"/>
+        <Image BackgroundColor="#CBB509" x:Name="FRole" Margin="0" Aspect="AspectFit" Source="FRole" Grid.Row="3" Grid.Column="0"/>
+        <Image BackgroundColor="#CBB509" x:Name="FEducation" Margin="0" Aspect="AspectFit" Source="FEducation" Grid.Row="4" Grid.Column="0"/>
+        <Image BackgroundColor="#CBB509" x:Name="FIndustry" Margin="0" Aspect="AspectFit" Source="FIndustry" Grid.Row="5" Grid.Column="0"/>
+        <Image BackgroundColor="#CBB509" x:Name="FDepartment" Margin="0" Aspect="AspectFit" Source="FDepartment" Grid.Row="6" Grid.Column="0"/>
+        <Frame Grid.RowSpan="7" Grid.ColumnSpan="1" Grid.Column="1" HasShadow="False" >
+            
+        </Frame>
+            <Label  Grid.ColumnSpan="2" Grid.Row="7" Grid.Column="0" Text="APPLY NOW" FontAttributes="Bold" FontSize="17" TextColor="Black" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" BackgroundColor="#DFC91D"/>
+    </Grid>
+    </ScrollView>
+</ContentPage>

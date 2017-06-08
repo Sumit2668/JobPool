@@ -34,23 +34,23 @@
                             <!--Location-->
                             <StackLayout VerticalOptions="Start" HorizontalOptions="FillAndExpand" Spacing="0" Padding="13,0">
                                 <Label x:Name ="lblLocation"
-                           Text ="CITY:"
-                           IsVisible ="false"
-                           TextColor="#E8E8E8" 
-                           FontSize="12" />
+                                       Text ="CITY:"
+                                       IsVisible ="false"
+                                       TextColor="#E8E8E8" 
+                                       FontSize="12" />
                                 <StackLayout VerticalOptions="Start" 
-                                 HorizontalOptions="FillAndExpand" 
-                                 Orientation="Horizontal">
+                                             HorizontalOptions="FillAndExpand" 
+                                             Orientation="Horizontal">
                                     <local:MyEntry x:Name="txtlocation"
-                                       FontSize="15" 
-                                       Focused="txtlocation_Focused" 
-                                       Unfocused="txtlocation_Unfocused"
-                                       FontFamily="SF UI Display" 
-                                       PlaceholderColor="#E8E8E8"
-							           Placeholder="CITY" 
-                                       HorizontalOptions="FillAndExpand" 
-                                       TextColor="#E8E8E8"
-							           HeightRequest="40">
+                                                   FontSize="15" 
+                                                   Focused="txtlocation_Focused" 
+                                                   Unfocused="txtlocation_Unfocused"
+                                                   FontFamily="SF UI Display" 
+                                                   PlaceholderColor="#E8E8E8"
+							                       Placeholder="CITY" 
+                                                   HorizontalOptions="FillAndExpand" 
+                                                   TextColor="#E8E8E8"
+							                       HeightRequest="40">
                                     </local:MyEntry>
                                     <Image Source="location" Aspect="AspectFit" />
                                 </StackLayout>
@@ -62,7 +62,7 @@
                                          BackgroundColor="#DFC91D"
                                          HorizontalOptions="FillAndExpand" 
                                          VerticalOptions="EndAndExpand" 
-                                        FontSize="18"
+                                         FontSize="18"
                                          FontAttributes="Bold"
                                          BorderRadius="2"
                                          HeightRequest="55" 

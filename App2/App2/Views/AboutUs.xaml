@@ -75,7 +75,6 @@
                     <TapGestureRecognizer  />
                 </Label.GestureRecognizers>
             </Label>
-
             <Label x:Name="lblCandidate" HorizontalOptions="EndAndExpand" Margin="1,0,0,0" FontSize="20" BackgroundColor="#DFC91D" TextColor="Black" Text="CANDIDATE" HorizontalTextAlignment="Center"  VerticalTextAlignment="Center"  >
                 <Label.GestureRecognizers>
                     <TapGestureRecognizer />

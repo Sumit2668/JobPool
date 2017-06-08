@@ -105,8 +105,8 @@
                     </Button>
                 </StackLayout>
                 <Image Source="or" Aspect="AspectFill" VerticalOptions="StartAndExpand" Margin="2"/>
-                <StackLayout  Padding="0,0,10,0"  Orientation="Horizontal" VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand" >
-                    <Button       x:Name="btnFB"
+                <StackLayout  Padding="0,0,10,10"  Orientation="Horizontal" VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand" >
+                    <Button  x:Name="btnFB"
                              Image="fb"
                              BackgroundColor="Transparent"
                              HorizontalOptions="StartAndExpand" 

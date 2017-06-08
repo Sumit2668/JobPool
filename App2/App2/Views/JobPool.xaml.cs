@@ -96,7 +96,7 @@ namespace App2.Views
 
         private void Circle_Tapped(object sender, EventArgs e)
         {
-            Navigation.PushModalAsync(new JobPoolList());
+            Navigation.PushModalAsync(new FilterSort());
         }
     }
 }
