@@ -19,32 +19,69 @@
           HasBackgroundAnimation="True"/>
     </pages:PopupPage.Animation>-->
     <ScrollView>
-        <Grid BackgroundColor="#CBB509" ColumnSpacing="0">
+        <Grid BackgroundColor="#CBB509" RowSpacing="0" ColumnSpacing="0">
         <Grid.RowDefinitions>
-        <RowDefinition x:Name="Row0" Height="*"/>
-        <RowDefinition x:Name="Row1" Height="*"/>
-        <RowDefinition x:Name="Row2" Height="*"/>
-        <RowDefinition x:Name="Row3" Height="*"/>
-        <RowDefinition x:Name="Row4" Height="*"/>
-        <RowDefinition x:Name="Row5" Height="*"/>
-        <RowDefinition x:Name="Row6" Height="*"/>
-        <RowDefinition x:Name="Row7" Height="*"/>
+        <RowDefinition Height="*"/>
+        <RowDefinition Height="*"/>
+        <RowDefinition Height="*"/>
+        <RowDefinition Height="*"/>
+        <RowDefinition Height="*"/>
+        <RowDefinition Height="*"/>
+        <RowDefinition Height="*"/>
+        <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
         <ColumnDefinition x:Name="Column1" Width="*"/>
         <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
-        <Image BackgroundColor="White" x:Name="FSort" Margin="0" Aspect="AspectFit" Source="FSort" Grid.Row="0" Grid.Column="0"/>
-        <Image BackgroundColor="#CBB509" x:Name="FSalary" Margin="0" Aspect="AspectFit" Source="FSalary" Grid.Row="1" Grid.Column="0"/>
-        <Image BackgroundColor="#CBB509" x:Name="FLocation" Margin="0" Aspect="AspectFit" Source="FLocation" Grid.Row="2" Grid.Column="0"/>
-        <Image BackgroundColor="#CBB509" x:Name="FRole" Margin="0" Aspect="AspectFit" Source="FRole" Grid.Row="3" Grid.Column="0"/>
-        <Image BackgroundColor="#CBB509" x:Name="FEducation" Margin="0" Aspect="AspectFit" Source="FEducation" Grid.Row="4" Grid.Column="0"/>
-        <Image BackgroundColor="#CBB509" x:Name="FIndustry" Margin="0" Aspect="AspectFit" Source="FIndustry" Grid.Row="5" Grid.Column="0"/>
-        <Image BackgroundColor="#CBB509" x:Name="FDepartment" Margin="0" Aspect="AspectFit" Source="FDepartment" Grid.Row="6" Grid.Column="0"/>
-        <Frame Grid.RowSpan="7" Grid.ColumnSpan="1" Grid.Column="1" HasShadow="False" >
+            <StackLayout BackgroundColor="White"  Orientation="Vertical" HorizontalOptions="FillAndExpand" Grid.Row="0" Grid.Column="0">
+                <Image BackgroundColor="White" x:Name="FSort" Margin="0" Aspect="AspectFit" Source="FSort" HeightRequest="10"/>
+                <Label Text="Sort" BackgroundColor="White"  HorizontalOptions="CenterAndExpand" VerticalTextAlignment="Start" HorizontalTextAlignment="Center" />
+            </StackLayout>
+            <StackLayout Orientation="Vertical" Margin="0" Padding="0" Spacing="0" HorizontalOptions="FillAndExpand" Grid.Row="1" Grid.Column="0">
+                <Image BackgroundColor="#CBB509" x:Name="FSalary" Margin="0" Aspect="AspectFit" Source="FSalary" HeightRequest="10"/>
+                <Label Text="Salary" HorizontalOptions="CenterAndExpand" VerticalTextAlignment="Start" HorizontalTextAlignment="Center" />
+            </StackLayout>
+            <StackLayout Orientation="Vertical" Margin="0" Padding="0" Spacing="0" HorizontalOptions="FillAndExpand" Grid.Row="2" Grid.Column="0">
+                <Image BackgroundColor="#CBB509" x:Name="FLocation" Margin="0" Aspect="AspectFit" Source="FLocation" HeightRequest="10"/>
+                <Label Text="Location" HorizontalOptions="CenterAndExpand" VerticalTextAlignment="Start" HorizontalTextAlignment="Center" />
+            </StackLayout>
+            <StackLayout Orientation="Vertical" Margin="0" Padding="0" Spacing="0" HorizontalOptions="FillAndExpand" Grid.Row="3" Grid.Column="0">
+                <Image BackgroundColor="#CBB509" x:Name="FRole" Margin="0" Aspect="AspectFit" Source="FRole" />
+                <Label Text="Role" HorizontalOptions="CenterAndExpand" VerticalTextAlignment="Start" HorizontalTextAlignment="Center"/>
+            </StackLayout>
+            <StackLayout Orientation="Vertical" Margin="0" Padding="0" Spacing="0"  HorizontalOptions="FillAndExpand"  Grid.Row="4" Grid.Column="0">
+                <Image BackgroundColor="#CBB509" x:Name="FEducation" Margin="0" Aspect="AspectFit" Source="FEducation"/>
+                <Label Text="Education"  HorizontalOptions="CenterAndExpand" VerticalTextAlignment="Start" HorizontalTextAlignment="Center"/>
+            </StackLayout>
+            <StackLayout Orientation="Vertical" Margin="0" Padding="0" Spacing="0" HorizontalOptions="FillAndExpand" Grid.Row="5" Grid.Column="0">
+                <Image BackgroundColor="#CBB509" x:Name="FIndustry" Margin="0" Aspect="AspectFit" Source="FIndustry"/>
+                <Label Text="Industry" HorizontalOptions="CenterAndExpand" VerticalTextAlignment="Start" HorizontalTextAlignment="Center"/>
+            </StackLayout>
+            <StackLayout Orientation="Vertical" Margin="0" Padding="0" Spacing="0" HorizontalOptions="FillAndExpand" Grid.Row="6" Grid.Column="0">
+                <Image BackgroundColor="#CBB509" x:Name="FDepartment" Margin="0" Aspect="AspectFit" Source="FDepartment" />
+                <Label Text="Department"  HorizontalOptions="CenterAndExpand" VerticalTextAlignment="Start" HorizontalTextAlignment="Center"/>
+            </StackLayout>
+            <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" Grid.RowSpan="7" Grid.ColumnSpan="1" Grid.Column="1" BackgroundColor="White">
             
-        </Frame>
+        </StackLayout>
             <Label  Grid.ColumnSpan="2" Grid.Row="7" Grid.Column="0" Text="APPLY NOW" FontAttributes="Bold" FontSize="17" TextColor="Black" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" BackgroundColor="#DFC91D"/>
     </Grid>
     </ScrollView>
+    <!--<StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand">
+        <Image BackgroundColor="White" x:Name="FSort" Margin="0" Aspect="AspectFit" Source="FSort" />
+        <Label Text="Sort" />        
+        <Image BackgroundColor="#CBB509" x:Name="FSalary" Margin="0" Aspect="AspectFit" Source="FSalary" />
+        <Label Text="Salary" />
+        <Image BackgroundColor="#CBB509" x:Name="FLocation" Margin="0" Aspect="AspectFit" Source="FLocation"/>
+        <Label Text="Location" />
+        <Image BackgroundColor="#CBB509" x:Name="FRole" Margin="0" Aspect="AspectFit" Source="FRole" />
+        <Label Text="Role" />
+        <Image BackgroundColor="#CBB509" x:Name="FEducation" Margin="0" Aspect="AspectFit" Source="FEducation" />
+        <Label Text="Education" />
+        <Image BackgroundColor="#CBB509" x:Name="FIndustry" Margin="0" Aspect="AspectFit" Source="FIndustry" />
+        <Label Text="Industry" />
+        <Image BackgroundColor="#CBB509" x:Name="FDepartment" Margin="0" Aspect="AspectFit" Source="FDepartment"/>
+        <Label Text="Department" />
+    </StackLayout>-->    
 </ContentPage>

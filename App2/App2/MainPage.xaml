@@ -29,8 +29,6 @@
                                              Android="100"/>
                             </controls:CircleImage.HeightRequest>
                         </controls:CircleImage>
-
-
                         <Label Text="Company Name"
                  FontSize="20"
                  VerticalOptions="CenterAndExpand"
