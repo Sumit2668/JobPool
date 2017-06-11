@@ -16,14 +16,15 @@ namespace App2
 		public MainPage()
 		{
 			InitializeComponent();
-			menuList = new List<MasterPageItem>();
+            MasterBehavior = MasterBehavior.Popover;
+            menuList = new List<MasterPageItem>();
 
 			// Creating our pages for menu navigation
 			// Here you can define title for item, 
 			// icon on the left side, and page that you want to open after selection
 			var page1 = new MasterPageItem() { Title = "Profie", Icon = "person_black.png", TargetType = typeof(Candidate) };
 			var page2 = new MasterPageItem() { Title = "Search Candidates", Icon = "search.png", TargetType = typeof(EmployeeRegister) };
-            var page3 = new MasterPageItem() { Title = "Payment", Icon = "FPayBlack.png", TargetType = typeof(EmployeeRegister) };
+            var page3 = new MasterPageItem() { Title = "Payment", Icon = "FPayBlack.png", TargetType = typeof(FilterSort) };
             var page4 = new MasterPageItem() { Title = "Notification", Icon = "notifications.png", TargetType = typeof(FranchiseReg) };
 			var page5 = new MasterPageItem() { Title = "About Us", Icon = "about_us.png", TargetType = typeof(AboutUs) };
 			var page6 = new MasterPageItem() { Title = "Change Password", Icon = "password.png", TargetType = typeof(ChangePassword) };

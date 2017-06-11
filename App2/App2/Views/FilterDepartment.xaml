@@ -1,10 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <pages:PopupPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
-             xmlns:animations="clr-namespace:Rg.Plugins.Popup.Animations;assembly=Rg.Plugins.Popup"
-             x:Class="App2.Views.FilterSort"
-             Title="FILTER">
+                 xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+                xmlns:animations="clr-namespace:Rg.Plugins.Popup.Animations;assembly=Rg.Plugins.Popup"
+                x:Class="App2.Views.FilterDepartment">
     <pages:PopupPage.Animation>
         <animations:ScaleAnimation
       PositionIn="Center"
@@ -37,13 +36,13 @@
             </Grid.ColumnDefinitions>
             <StackLayout BackgroundColor="Transparent" HeightRequest="4" Orientation="Vertical" HorizontalOptions="FillAndExpand" Grid.Row="0" Grid.Column="0">
             </StackLayout>
-            <StackLayout BackgroundColor="White"  Orientation="Vertical" HorizontalOptions="FillAndExpand" Grid.Row="1" Grid.Column="0">
-                <Image BackgroundColor="White" x:Name="FSort" Margin="0" Aspect="AspectFit" Source="FSort" HeightRequest="10">
+            <StackLayout BackgroundColor="Transparent"  Orientation="Vertical" HorizontalOptions="FillAndExpand" Grid.Row="1" Grid.Column="0">
+                <Image BackgroundColor="Transparent" x:Name="FSort" Margin="0" Aspect="AspectFit" Source="FSort" HeightRequest="10">
                     <Image.GestureRecognizers>
                         <TapGestureRecognizer Tapped="Sort_Tapped"/>
                     </Image.GestureRecognizers>
                 </Image>
-                <Label Text="Sort" FontAttributes="Bold" BackgroundColor="White" HeightRequest="50" HorizontalOptions="CenterAndExpand" VerticalTextAlignment="Start" HorizontalTextAlignment="Center" >
+                <Label Text="Sort" FontAttributes="Bold" BackgroundColor="Transparent" HeightRequest="50" HorizontalOptions="CenterAndExpand" VerticalTextAlignment="Start" HorizontalTextAlignment="Center" >
                     <Label.GestureRecognizers>
                         <TapGestureRecognizer Tapped="Sort_Tapped"/>
                     </Label.GestureRecognizers>
@@ -127,8 +126,8 @@
                     <TapGestureRecognizer Tapped="Industry_Tapped"/>
                 </StackLayout.GestureRecognizers>
             </StackLayout>
-            <StackLayout Orientation="Vertical" Margin="0" Padding="0" Spacing="0" HorizontalOptions="FillAndExpand" Grid.Row="7" Grid.Column="0">
-                <Image BackgroundColor="#CBB509" x:Name="FDepartment" Margin="0" Aspect="AspectFit" Source="FDepartment" >
+            <StackLayout Orientation="Vertical" BackgroundColor="White" Margin="0" Padding="0" Spacing="0" HorizontalOptions="FillAndExpand" Grid.Row="7" Grid.Column="0">
+                <Image BackgroundColor="White" x:Name="FDepartment" Margin="0" Aspect="AspectFit" Source="FDepartment" >
                     <Image.GestureRecognizers>
                         <TapGestureRecognizer Tapped="Department_Tapped"/>
                     </Image.GestureRecognizers>
@@ -152,4 +151,5 @@
             </Label>
         </Grid>
     </ScrollView>
+
 </pages:PopupPage>

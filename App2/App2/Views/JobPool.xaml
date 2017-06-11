@@ -98,27 +98,28 @@
                                             <StackLayout Orientation="Horizontal"  VerticalOptions="Start" HorizontalOptions="FillAndExpand">
                                                 <StackLayout x:Name="stkShow"  Orientation="Horizontal" HorizontalOptions="StartAndExpand">
                                                     <Image  Source="{Binding ImgCity}"  Aspect="AspectFit" HeightRequest="16" WidthRequest="16"/>
-                                                    <Label Text="{Binding City}" TextColor="Black" FontAttributes="Bold" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" FontSize="12" HorizontalOptions="StartAndExpand"/>
+                                                    <Label Text="{Binding City}" TextColor="Black"  VerticalTextAlignment="Center" HorizontalTextAlignment="Start" FontSize="12" HorizontalOptions="StartAndExpand"/>
                                                     <Image   Source="{Binding ImgYear}"  Aspect="AspectFit" HeightRequest="16" WidthRequest="16"/>
-                                                    <Label Text="{Binding Year}" TextColor="Black" FontAttributes="Bold" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" FontSize="12" HorizontalOptions="StartAndExpand"/>
+                                                    <Label Text="{Binding Year}" TextColor="Black"  VerticalTextAlignment="Center" HorizontalTextAlignment="Start" FontSize="12" HorizontalOptions="StartAndExpand"/>
                                                 </StackLayout>
-                                                <Button x:Name="btnShow" BackgroundColor="#DFC91D" Text="Show Interest" TextColor="Black" HorizontalOptions="EndAndExpand" FontAttributes="Bold"
+                                                <Button x:Name="btnShow" BackgroundColor="#DFC91D" 
+                                                        Text="Show Interest" TextColor="Black" 
+                                                        HorizontalOptions="EndAndExpand"
                                                     FontSize="11" WidthRequest="125" >
                                                     <Button.HeightRequest>
-                                                        <OnPlatform   x:TypeArguments="x:Double" iOS="30" Android="40" />
+                                                        <OnPlatform x:TypeArguments="x:Double" iOS="30" Android="40" />
                                                     </Button.HeightRequest>
                                                 </Button>
 
                                             </StackLayout>
                                             <StackLayout Orientation="Horizontal" VerticalOptions="Start" HorizontalOptions="FillAndExpand" >
                                                 <StackLayout x:Name="stkcontact" Orientation="Horizontal"  HorizontalOptions="StartAndExpand">
-                                                    <Image  Source="{Binding ImgProfession}"  Aspect="AspectFit" HeightRequest="16" WidthRequest="16"/>
-                                                    <Label Text="{Binding Profession}" FontAttributes="Bold" TextColor="Black" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" FontSize="12" HorizontalOptions="StartAndExpand" />
+                                                    <Image  Source="{Binding ImgProfession}" Aspect="AspectFit" HeightRequest="16" WidthRequest="16"/>
+                                                    <Label Text="{Binding Profession}" TextColor="Black" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" FontSize="12" HorizontalOptions="StartAndExpand" />
                                                 </StackLayout>
                                                 <Button  x:Name="btnContacts"
                                                              BackgroundColor="Black" 
 											                 TextColor="White" 
-											                 FontAttributes="Bold"
 											                 Text="Contects" 
 											                 HorizontalOptions="EndAndExpand" 
                                                              FontSize="11"

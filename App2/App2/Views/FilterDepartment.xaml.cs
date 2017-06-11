@@ -12,14 +12,13 @@ using Xamarin.Forms.Xaml;
 namespace App2.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class FilterSort : PopupPage
+    public partial class FilterDepartment : PopupPage
     {
-        public FilterSort()
+        public FilterDepartment()
         {
-            this.Title = "FILTER";
             InitializeComponent();
-            NavigationPage.SetHasBackButton(this, true);
         }
+        
         protected virtual Task OnAppearingAnimationEnd()
         {
             return Content.FadeTo(0);
@@ -41,9 +40,9 @@ namespace App2.Views
             {
                 var calcScreenWidth = Application.Current.MainPage.Width;
                 var calcScreenHieght = Application.Current.MainPage.Height;
-                FSort.HeightRequest= FDepartment.HeightRequest =FSalary.HeightRequest=FEducation.HeightRequest=FIndustry.HeightRequest=FLocation.HeightRequest=FRole.HeightRequest= calcScreenWidth/ 10-15;
+                FSort.HeightRequest = FDepartment.HeightRequest = FSalary.HeightRequest = FEducation.HeightRequest = FIndustry.HeightRequest = FLocation.HeightRequest = FRole.HeightRequest = calcScreenWidth / 10 - 15;
                 Row1.Height = Row2.Height = Row3.Height = Row4.Height = Row5.Height = Row6.Height = Row7.Height = calcScreenHieght / 7;
-                Column1.Width= calcScreenWidth / 3;
+                Column1.Width = calcScreenWidth / 3;
             }
         }
         private async void Sort_Tapped(object sender, EventArgs e)
@@ -85,5 +84,5 @@ namespace App2.Views
         {
 
         }
-    }   
+    }
 }
