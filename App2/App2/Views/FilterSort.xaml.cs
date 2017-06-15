@@ -20,15 +20,6 @@ namespace App2.Views
             InitializeComponent();
             NavigationPage.SetHasBackButton(this, true);
         }
-        protected virtual Task OnAppearingAnimationEnd()
-        {
-            return Content.FadeTo(0);
-        }
-
-        protected virtual Task OnDisappearingAnimationBegin()
-        {
-            return Content.FadeTo(0); ;
-        }
 
         protected override bool OnBackButtonPressed()
         {
@@ -42,13 +33,13 @@ namespace App2.Views
                 var calcScreenWidth = Application.Current.MainPage.Width;
                 var calcScreenHieght = Application.Current.MainPage.Height;
                 FSort.HeightRequest= FDepartment.HeightRequest =FSalary.HeightRequest=FEducation.HeightRequest=FIndustry.HeightRequest=FLocation.HeightRequest=FRole.HeightRequest= calcScreenWidth/ 10-15;
-                Row1.Height = Row2.Height = Row3.Height = Row4.Height = Row5.Height = Row6.Height = Row7.Height = calcScreenHieght / 7;
+                Row1.Height = Row2.Height = Row3.Height = Row4.Height = Row5.Height = Row6.Height = Row7.Height = calcScreenHieght / 7-11;
                 Column1.Width= calcScreenWidth / 3;
             }
         }
         private async void Sort_Tapped(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new FilterSort());
+            await PopupNavigation.PushAsync(new FilterSort());
         }
 
         private async void Salary_Tapped(object sender, EventArgs e)

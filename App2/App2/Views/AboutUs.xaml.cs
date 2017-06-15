@@ -1,4 +1,6 @@
-﻿using System;
+﻿using App2.Models;
+using Rg.Plugins.Popup.Services;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,13 +25,17 @@ namespace App2.Views
             {
                var calcScreenWidth =Application.Current.MainPage.Width;
                 var calcScreenHieght= Application.Current.MainPage.Height;
-                MainGrid.HeightRequest = calcScreenHieght / 2 - 70;
-                CircleImg.WidthRequest = calcScreenWidth / 3;
-                CircleImg.HeightRequest= calcScreenWidth / 3;
+                MainGrid.HeightRequest = calcScreenHieght / 3;
+                CircleImg.WidthRequest = calcScreenWidth / 4;
+                CircleImg.HeightRequest= calcScreenWidth / 4;
                 lblCandidate.WidthRequest = calcScreenWidth / 2;
                 lblDownload.WidthRequest = calcScreenWidth / 2;
-
             }
+        }
+
+        private async void PhotoPopup_Tapped(object sender, EventArgs e)
+        {
+            await PopupNavigation.PushAsync(new PhotoDialog());
         }
     }
 }

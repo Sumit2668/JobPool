@@ -36,7 +36,7 @@
             </Grid.ColumnDefinitions>
             <StackLayout BackgroundColor="Transparent" HeightRequest="4" Orientation="Vertical" HorizontalOptions="FillAndExpand" Grid.Row="0" Grid.Column="0">
             </StackLayout>
-            <StackLayout BackgroundColor="Transparent"  Orientation="Vertical" HorizontalOptions="FillAndExpand" Grid.Row="1" Grid.Column="0">
+            <StackLayout BackgroundColor="Transparent"  Orientation="Vertical" HorizontalOptions="CenterAndExpand" Grid.Row="1" Grid.Column="0">
                 <Image BackgroundColor="Transparent" x:Name="FSort" Margin="0" Aspect="AspectFit" Source="FSort" HeightRequest="10">
                     <Image.GestureRecognizers>
                         <TapGestureRecognizer Tapped="Sort_Tapped"/>

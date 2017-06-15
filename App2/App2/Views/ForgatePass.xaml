@@ -20,7 +20,7 @@
   HasBackgroundAnimation="True"/>
   </pages:PopupPage.Animation>
 
-  <StackLayout >
+  
     <StackLayout Padding="60,170" >
 
       <StackLayout VerticalOptions="Start"
@@ -29,14 +29,14 @@
               HorizontalOptions="FillAndExpand"
               Orientation="Vertical">
           <Label Text="FORGOT PASSWORD"
-          TextColor="Black"
-          FontSize="16"
-          FontAttributes="Bold"
-          VerticalTextAlignment="Start"
-          VerticalOptions="CenterAndExpand"
-          HorizontalTextAlignment="Start"
-          HorizontalOptions="CenterAndExpand"
-          Margin="10"/>
+                    TextColor="Black"
+                    FontSize="16"
+                    FontAttributes="Bold"
+                    VerticalTextAlignment="Start"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalTextAlignment="Start"
+                    HorizontalOptions="CenterAndExpand"
+                    Margin="10"/>
           <BoxView BackgroundColor="#CBB509" HeightRequest="1"/>
           <StackLayout VerticalOptions="Start" HorizontalOptions="Center"  Spacing="0" Orientation="Horizontal" Padding="0">
             <Label x:Name ="lblMessage" Text ="" IsVisible ="false" TextColor="Red" FontSize="13" HorizontalOptions="Center" FontAttributes="Bold" />
@@ -86,5 +86,5 @@
             Clicked="btnForgate_Clicked" />-->    
       </StackLayout>
     </StackLayout>
-  </StackLayout>
+  
 </pages:PopupPage>

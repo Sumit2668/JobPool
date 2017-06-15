@@ -2,6 +2,7 @@
 using App2.Helper;
 using App2.Models;
 using App2.StaticMethod;
+using Rg.Plugins.Popup.Pages;
 using Rg.Plugins.Popup.Services;
 using System;
 using System.Collections.Generic;
@@ -16,7 +17,7 @@ using Xamarin.Forms.Xaml;
 namespace App2.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class ChangePassword : ContentPage
+    public partial class ChangePassword : PopupPage
     {
         JobPoolAPI api = new JobPoolAPI();
         public ChangePassword()
@@ -29,7 +30,7 @@ namespace App2.Views
             await Task.Delay(100);
             txtEmailID.Placeholder = string.Empty;
             lblEmailID.IsVisible = true;
-
+            
         }
 
         private void txtEmailID_Unfocused(object sender, EventArgs e)

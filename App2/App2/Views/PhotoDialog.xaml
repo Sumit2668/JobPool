@@ -4,5 +4,62 @@
                    xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
                 xmlns:animations="clr-namespace:Rg.Plugins.Popup.Animations;assembly=Rg.Plugins.Popup"
              x:Class="App2.Views.PhotoDialog"
-                 Padding="100">
+                 Padding="60,200">
+    <pages:PopupPage.Animation>
+        <animations:ScaleAnimation
+      PositionIn="Center"
+      PositionOut="Center"
+      ScaleIn="1.2"
+      ScaleOut="1.2"
+      DurationIn="400"
+      DurationOut="300"
+      EasingIn="SinOut"
+      EasingOut="SinIn"
+      HasBackgroundAnimation="True"/>
+    </pages:PopupPage.Animation>
+    <Frame BackgroundColor="#DFC91D">
+                <StackLayout VerticalOptions="Start"
+			                 HorizontalOptions="FillAndExpand" BackgroundColor="#DFC91D">
+            <Label x:Name="lblTakePhoto"
+                           Text="Take Photo"
+				           TextColor="Black"
+				           Font="Bold,17"
+						   VerticalTextAlignment="Start"
+				           VerticalOptions="CenterAndExpand"
+				           HorizontalTextAlignment="Start"
+				           HorizontalOptions="StartAndExpand"
+				           Margin="10">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TakePhoto_Tapped"/>
+                </Label.GestureRecognizers>
+            </Label>
+            <Label x:Name="lblSPGalary"
+                           Text="Select Photo Galary"
+				           TextColor="Black"
+				           Font="Bold,17"
+				           VerticalTextAlignment="Start"
+				           VerticalOptions="CenterAndExpand"
+				           HorizontalTextAlignment="Start"
+				           HorizontalOptions="StartAndExpand"
+				           Margin="10">
+            <Label.GestureRecognizers>
+                <TapGestureRecognizer Tapped="SelectPhoto_Tapped"/>
+            </Label.GestureRecognizers>
+            </Label>
+            <Image x:Name="MainImage" HeightRequest="20" IsVisible="False" HorizontalOptions="StartAndExpand"/>
+            <Label x:Name="lblCancel"
+                          Text="CANCEL"
+				          TextColor="Black"
+				          FontSize="17"
+						  VerticalTextAlignment="Start"
+				          VerticalOptions="CenterAndExpand"
+				          HorizontalTextAlignment="Start"
+				          HorizontalOptions="EndAndExpand"
+				          Margin="10">
+            <Label.GestureRecognizers>
+                <TapGestureRecognizer Tapped="Cancel_Tapped"/>
+            </Label.GestureRecognizers>
+            </Label>
+        </StackLayout>
+    </Frame>
 </pages:PopupPage>

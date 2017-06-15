@@ -3,6 +3,7 @@ using App2.Menuitems;
 using App2.Models;
 using App2.StaticMethod;
 using App2.Views;
+using Rg.Plugins.Popup.Services;
 using System;
 using System.Collections.Generic;
 using Xamarin.Forms;
@@ -51,7 +52,7 @@ namespace App2
 
 		// Event for Menu Item selection, here we are going to handle navigation based
 		// on user selection in menu ListView
-		private void OnMenuItemSelected(object sender, SelectedItemChangedEventArgs e)
+		private async void OnMenuItemSelected(object sender, SelectedItemChangedEventArgs e)
 		{
             
 			var item = (MasterPageItem)e.SelectedItem;
@@ -62,12 +63,17 @@ namespace App2
                 api.postLogout(user.EmailID);
                 Navigation.PushModalAsync(new LoginPage());
 			}
-			else
-			{
-				Type page = item.TargetType;
-				Detail = new NavigationPage((Page)Activator.CreateInstance(page));
-				IsPresented = false;
-			}
+            if (item.Title == "Change Password")
+            {
+            await PopupNavigation.PushAsync(new ChangePassword());
+            }
+            
+            else
+            {
+                Type page = item.TargetType;
+                Detail = new NavigationPage((Page)Activator.CreateInstance(page));
+                IsPresented = false;
+            }
 		}
 	}
 }

@@ -38,12 +38,12 @@
             <StackLayout BackgroundColor="Transparent" HeightRequest="4" Orientation="Vertical" HorizontalOptions="FillAndExpand" Grid.Row="0" Grid.Column="0">
             </StackLayout>
             <StackLayout BackgroundColor="White"  Orientation="Vertical" HorizontalOptions="FillAndExpand" Grid.Row="1" Grid.Column="0">
-                <Image BackgroundColor="White" x:Name="FSort" Margin="0" Aspect="AspectFit" Source="FSort" HeightRequest="10">
+                <Image BackgroundColor="White" HorizontalOptions="Center" VerticalOptions="Center" x:Name="FSort" Margin="0" Aspect="AspectFit" Source="FSort" HeightRequest="10">
                     <Image.GestureRecognizers>
                         <TapGestureRecognizer Tapped="Sort_Tapped"/>
                     </Image.GestureRecognizers>
                 </Image>
-                <Label Text="Sort" FontAttributes="Bold" BackgroundColor="White" HeightRequest="50" HorizontalOptions="CenterAndExpand" VerticalTextAlignment="Start" HorizontalTextAlignment="Center" >
+                <Label Text="Sort" Margin="0" FontAttributes="Bold" BackgroundColor="White"  HorizontalOptions="CenterAndExpand" VerticalTextAlignment="Start" HorizontalTextAlignment="Center">
                     <Label.GestureRecognizers>
                         <TapGestureRecognizer Tapped="Sort_Tapped"/>
                     </Label.GestureRecognizers>
