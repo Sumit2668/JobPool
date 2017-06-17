@@ -11,9 +11,20 @@
                     <Label x:Name ="lblMessage" Text ="" IsVisible ="false" TextColor="Red" FontSize="13" HorizontalOptions="Center" FontAttributes="Bold" />
                 </StackLayout>
                 <!--Skill-->
-                <StackLayout VerticalOptions="Start" HorizontalOptions="FillAndExpand" Spacing="0" Padding="13,0">
-                    <Label x:Name ="lblSkill" Text ="SKILL,JOB,ROLL:" IsVisible ="false" TextColor="#E8E8E8" FontSize="12" />
-                    <StackLayout VerticalOptions="Start" HorizontalOptions="FillAndExpand" Spacing="0" Orientation="Horizontal" Padding="0">
+                <StackLayout VerticalOptions="Start" 
+                             HorizontalOptions="FillAndExpand"
+                             Spacing="0"
+                             Padding="13,0">
+                    <Label x:Name ="lblSkill"
+                           Text ="SKILL,JOB,ROLL:" 
+                           IsVisible ="false"
+                           TextColor="#E8E8E8" 
+                           FontSize="12" />
+                    <StackLayout VerticalOptions="Start"
+                                 HorizontalOptions="FillAndExpand" 
+                                 Spacing="0" 
+                                 Orientation="Horizontal"
+                                 Padding="0">
                         <local:MyEntry x:Name="txtSkill" 
                                        FontSize="15" 
                                        Focused="txtSkill_Focused"
@@ -30,7 +41,9 @@
                     <BoxView BackgroundColor="#E8E8E8" HeightRequest="1"/>
                 </StackLayout>
                 <!--Location-->
-                <StackLayout VerticalOptions="Start" HorizontalOptions="FillAndExpand" Spacing="0" Padding="13,0">
+                <StackLayout VerticalOptions="Start"
+                             HorizontalOptions="FillAndExpand" 
+                             Spacing="0" Padding="13,0">
                     <Label x:Name ="lblLocation"
                            Text ="CITY:"
                            IsVisible ="false"

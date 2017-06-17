@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App2.Views.SelectPackages"
+             Title="SELECT PACKAGES"
+             BackgroundImage="bg">
+    <StackLayout Orientation="Vertical" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+        <StackLayout Orientation="Horizontal" VerticalOptions="FillAndExpand">
+            <Frame Padding="0" Margin="0"  VerticalOptions="FillAndExpand" BackgroundColor="Black"> 
+                <StackLayout Orientation="Horizontal" BackgroundColor="Yellow">
+                    <Image HeightRequest="50" Source="FUncheck" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+                </StackLayout>
+
+                <StackLayout Orientation="Vertical">
+                    <Label Text="10 Candidate" TextColor="Yellow" FontSize="28"/>
+                    <Label Text="only Rs 100" TextColor="White" FontSize="20"/>
+                </StackLayout>
+                
+            </Frame>
+        </StackLayout>
+    </StackLayout>
+</ContentPage>

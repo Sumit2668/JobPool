@@ -222,19 +222,19 @@ namespace App2.Views
         {
             try
             {
-                Erm.CompanyName = Convert.ToString(txtCompanyName.Text);
-                Erm.ContactPerson = Convert.ToString(txtConPerson.Text);
-                Erm.EmailID =    Convert.ToString(txtEmail.Text);
-                Erm.PhoneNo = Convert.ToString(txtPhone.Text);
+                Erm.COMPANY_NAME = Convert.ToString(txtCompanyName.Text);
+                Erm.CONTACT_PERSON = Convert.ToString(txtConPerson.Text);
+                Erm.EMAIL =    Convert.ToString(txtEmail.Text);
+                Erm.PHONE = Convert.ToString(txtPhone.Text);
                 Erm.Password = Convert.ToString(txtPass.Text);
-                Erm.CurrentRequirement = Convert.ToString(txtCurRequi.Text);
-                Erm.Experience = Convert.ToString(txtexeperiance.Text);
-                Erm.Skill = Convert.ToString(txtSkill.Text);
-                Erm.JobRoll = Convert.ToString(txtJobRoll.Text);
-                Erm.Location = Convert.ToString(txtlocation.Text);
-                Erm.Address = Convert.ToString(txtAddress.Text);
+                Erm.CURRENT_REQUIRMENT = Convert.ToString(txtCurRequi.Text);
+                Erm.EXPERIENCE = Convert.ToString(txtexeperiance.Text);
+                Erm.SKILL = Convert.ToString(txtSkill.Text);
+                Erm.JOBROLL = Convert.ToString(txtJobRoll.Text);
+                Erm.LOCATION = Convert.ToString(txtlocation.Text);
+                Erm.ADDRESS = Convert.ToString(txtAddress.Text);
                 api.postEmployerReg(Erm);
-                StaticMethods.ShowToast(responseMdl.Message);
+                StaticMethods.ShowToast(responseMdl.MESSAGE);
                 EmptyValues();
             }
             catch (Exception e)

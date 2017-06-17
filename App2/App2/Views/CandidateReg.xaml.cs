@@ -139,21 +139,21 @@ namespace App2.Views
         {
             try
             {
-                crm.UserName = Convert.ToString(txtname.Text);
+                crm.EMAIL = Convert.ToString(txtname.Text);
                 crm.UserID= Convert.ToString(txtuserid.Text);
-                crm.EmailID = Convert.ToString(txtemail.Text);
+                crm.NAME = Convert.ToString(txtemail.Text);
                 crm.Password = Convert.ToString(txtPass.Text);
-                crm.PhoneNo = Convert.ToString(txtphone.Text);
+                crm.PHONE = Convert.ToString(txtphone.Text);
                 if (ischkuotline==true)
                 {
-                    crm.Gander = "Male";
+                    crm.GENDER = "Male";
                 }
                 else
                 {
-                    crm.Gander = "Female";
+                    crm.GENDER = "Female";
                 }
                 api.postCandidateReg(crm);
-                StaticMethods.ShowToast(responseMdl.Message);
+                StaticMethods.ShowToast(responseMdl.MESSAGE);
             }
             catch (Exception e)
             {

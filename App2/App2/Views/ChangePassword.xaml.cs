@@ -44,7 +44,7 @@ namespace App2.Views
             if (Validate())
             {
                 usermodel= api.postChangePassword(txtEmailID.Text, txtOldPass.Text, txtNewPass.Text);
-                await PopupNavigation.PushAsync(new Successfully(usermodel.Message));
+                await PopupNavigation.PushAsync(new Successfully(usermodel.MESSAGE));
             }
         }
         

@@ -246,10 +246,10 @@ namespace App2.Views
                     api = new JobPoolAPI();
                     Loader.IsVisible = true; Loader.IsRunning = true;
                     usermodel = api.postLogin(txtFName.Text, txtPass.Text);
-                    if (usermodel.Success == "1")
+                    if (usermodel.SUCCESS == "1")
                     {
                         StaticMethods.SaveLocalData(usermodel);
-                        await PopupNavigation.PushAsync(new Successfully(usermodel.Message));
+                        await PopupNavigation.PushAsync(new Successfully(usermodel.MESSAGE));
                     }
                     Loader.IsVisible = false; Loader.IsRunning = false;
                     btnLogin.IsEnabled = true;

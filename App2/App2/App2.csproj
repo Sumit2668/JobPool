@@ -47,17 +47,16 @@
     </Compile>
     <Compile Include="Menuitems\MasterPageItem.cs" />
     <Compile Include="Models\CandidateRegMdl.cs" />
+    <Compile Include="Models\CONST.cs" />
     <Compile Include="Models\EmployerRegMdl.cs" />
-    <Compile Include="Models\FacebookProfile.cs" />
     <Compile Include="Models\JobPoolMdl.cs" />
+    <Compile Include="Models\ProfileDetails.cs" />
     <Compile Include="Models\ResponseModel.cs" />
     <Compile Include="Models\SocialSignUp.cs" />
     <Compile Include="NativeInterface\IAndroidMethods.cs" />
     <Compile Include="NativeInterface\IIosMethods.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Services\FacebookServices.cs" />
     <Compile Include="StaticMethod\StaticMethods.cs" />
-    <Compile Include="ViewModels\FacebookViewModel.cs" />
     <Compile Include="Views\AboutUs.xaml.cs">
       <DependentUpon>AboutUs.xaml</DependentUpon>
     </Compile>
@@ -70,10 +69,12 @@
     <Compile Include="Views\ChangePassword.xaml.cs">
       <DependentUpon>ChangePassword.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\EditProfile.xaml.cs">
+      <DependentUpon>EditProfile.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\EmployeeRegister.xaml.cs">
       <DependentUpon>EmployeeRegister.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\FacebookProfileCsPage.cs" />
     <Compile Include="Views\FilterDepartment.xaml.cs">
       <DependentUpon>FilterDepartment.xaml</DependentUpon>
     </Compile>
@@ -113,12 +114,14 @@
     <Compile Include="Views\LoginPage.xaml.cs">
       <DependentUpon>LoginPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\MainCsPage.cs" />
     <Compile Include="Views\PhotoDialog.xaml.cs">
       <DependentUpon>PhotoDialog.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\SelectCandidate.xaml.cs">
       <DependentUpon>SelectCandidate.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SelectPackages.xaml.cs">
+      <DependentUpon>SelectPackages.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\Successfully.xaml.cs">
       <DependentUpon>Successfully.xaml</DependentUpon>
@@ -301,6 +304,18 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Views\FilterEducation.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\EditProfile.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\SelectPackages.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

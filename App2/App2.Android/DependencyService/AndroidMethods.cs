@@ -43,10 +43,10 @@ namespace App2.Droid.DependencyService
                 var storage = prefs.Edit();
 				storage.PutString("UserID", um.UserID);
 				storage.PutString("UserName", um.UserName);
-				storage.PutString("EmailID", um.EmailID);
-				storage.PutString("Message", um.Message);
-				storage.PutString("Location", um.Location);
-				storage.PutString("Phone", um.Phone.ToString());
+				storage.PutString("EmailID", um.EMAIL);
+				storage.PutString("Message", um.MESSAGE);
+				storage.PutString("Location", um.LOCATION);
+				storage.PutString("Phone", um.PHONE.ToString());
                 //storage.PutString("LoginGUID", um.LoginGUID);
                 //storage.PutString("LoginSessionKey", um.LoginSessionKey);
                 //storage.PutString("redirect_back_url", um.redirect_back_url);
@@ -95,9 +95,9 @@ namespace App2.Droid.DependencyService
 
 				um.UserID = Convert.ToString(storage.GetString("UserID", null));
 				um.UserName = storage.GetString("UserName", null);
-				um.EmailID = storage.GetString("EmailID", null);
-				um.Location = storage.GetString("Location", null);
-				um.Message = storage.GetString("Message", null);
+				um.EMAIL = storage.GetString("EmailID", null);
+				um.LOCATION = storage.GetString("Location", null);
+				um.MESSAGE = storage.GetString("Message", null);
                 //um.UserTypeID = Convert.ToInt32(storage.GetString("UserTypeID", null));
                 //um.LoginGUID = Convert.ToString(storage.GetString("LoginGUID", null));
                 //um.LoginSessionKey = storage.GetString("LoginSessionKey", null);
